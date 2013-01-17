@@ -97,7 +97,6 @@
 	// repo urls
 	raw = "https://raw.github.com/stuntrally/";
 	trks = raw+"tracks/master/";
-	xmls = raw+"stuntrally/master/config/";
 
 	adiff = new Array("Test Easy","Very Easy","Easy","Medium","Hard","Very Hard","Extreme","Ultra");
 
@@ -112,8 +111,8 @@
 		if (xh.readyState == 4 && xh.status == 200)
 		{
 			//document.write(xh.responseText);
-			var parser = new DOMParser();
-			xmlDoc = parser.parseFromString(xh.responseText, "application/xml");
+
+			xmlDoc = xh.responseXML;
 			txt = "";
 			x = xmlDoc.getElementsByTagName("track");
 			ar = new Array();
@@ -157,7 +156,7 @@
 		}
 	}
 
-	xh.open("GET", xmls + "tracks.xml", false);
+	xh.open("GET", "tracks.xml", false);
 	xh.send();
 
 </script>
