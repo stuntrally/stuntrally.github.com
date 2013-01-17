@@ -112,8 +112,8 @@
 		if (xh.readyState == 4 && xh.status == 200)
 		{
 			//document.write(xh.responseText);
-
-			xmlDoc = xh.responseXML;
+			var parser = new DOMParser();
+			xmlDoc = parser.parseFromString(xh.responseText, "application/xml");
 			txt = "";
 			x = xmlDoc.getElementsByTagName("track");
 			ar = new Array();
@@ -157,8 +157,7 @@
 		}
 	}
 
-	//xh.open("GET", xmls+"tracks.xml", false);
-	xh.open("GET", "tracks.xml", false);
+	xh.open("GET", xmls + "tracks.xml", false);
 	xh.send();
 
 </script>
