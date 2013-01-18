@@ -102,7 +102,7 @@
 
 	function alphabetical(A, B)
 	{
-			if (A < B){  return -1;  }
+		if (A < B){  return -1;  }
 		else if (A > B){  return  1;  }
 		else {  return 0;  }
 	}
@@ -112,7 +112,7 @@
 	raw = "https://raw.github.com/stuntrally/";
 	trks = raw+"tracks/master/";
 
-	adiff = new Array("Test Easy","Very Easy","Easy","Medium","Hard","Very Hard","Extreme","Ultra");
+	adiff = ["Test Easy","Very Easy","Easy","Medium","Hard","Very Hard","Extreme","Ultra"];
 	
 	function lnk(s)
 	{
@@ -132,7 +132,7 @@
 			xmlDoc = xh.responseXML;
 			txt = "";
 			x = xmlDoc.getElementsByTagName("track");
-			ar = new Array();
+			ar = [];
 			for (i = 0; i < x.length; i++)
 			{
 				//created crtver modified author
