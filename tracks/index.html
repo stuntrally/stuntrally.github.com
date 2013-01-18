@@ -80,6 +80,9 @@
 			var txt = "";
 			var x = xmlDoc.getElementsByTagName("track");
 			var ar = [];
+
+			if (!id && x.length) id = x[(Math.random() * x.length)|0].getAttribute('name');
+
 			for (var i = 0; i < x.length; ++i)
 			{
 				//created crtver modified author
