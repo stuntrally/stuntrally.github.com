@@ -16,11 +16,13 @@
 		{	color: #000060; background-color: #E0E0E0;  text-decoration:none;  }
 		a.sel
 		{	color: #000060; background-color: #A0E080;  text-decoration:none;  }
+		a.btn
+		{	color: #D0F0FF; background-color: #90A0B0;  text-decoration:none;  width=50px;  }
 
 		td.top {  vertical-align:top;  }
 		div.hdr  {  height: 16px;  vertical-align:bottom;  font-size:12px;  font-family:Sans-Serif;
 			color: #000000; background-color: #A0C0E0;  }
-		td.hdr  {
+		td.hdr, table.hdr  {
 			color: #000000; background-color: #B0D0F0;  }
 			
 		#Col2	  {  position:relative;  }
@@ -33,48 +35,7 @@
 <body>
 
 
-<table cellpadding="5" cellspacing="0" border="0" width="950">
-<tr>
-	<td width="100" class="hdr">
-		<div id="Top1" class="hdr">Tracks</div>
-	</td>
-	<td width="200" class="hdr">
-		<div id="Top2" class="hdr">Pick a track from list.</div>
-	</td>
-	<td width="600" class="hdr">
-		<div id="Top3" class="hdr">View</div>
-	</td>
-</tr>
-<tr>
-	<td width="100">
-		<div id="Col1" style="overflow:scroll; width:100px;height:600px"></div>
-	</td>
-	<td class="top" width="200">
-		<div id="Col2">
-			<img id="ter" src="" alt="" title="" width="200" height="200"/>
-			<img id="road" src="" alt="Minimap" title="2D Minmap, road and terrain" width="200" height="200"/>
-			<div id="Stats"></div>
-		</div>
-	</td>
-	<td class="top" width="600">
-		<div id="Col3">
-			<img id="view" src="" alt="View" title="Track's 3D view" width="600" height="600"/>
-		</div>
-	</td>
-</tr>
-</table>
-
-
 <script type="text/javascript">
-
-	function alphabetical(A, B)
-	{
-		 //var A = a.toLowerCase();
-		 //var B = b.toLowerCase();
-			if (A < B){  return -1;  }
-		 else if (A > B){  return  1;  }
-		 else {  return 0;  }
-	}
 
 	//  get id from url
 	function getPar(name)
@@ -88,17 +49,75 @@
 	}
 
 	id = getPar('id');  // trk name
+	v = getPar('v');  // view size
+	if (v=='')  v=1;
+
+
+	// sizes: col list, mini size, view size
+	sz = [ [100,100,400],[100,200,600],[100,300,800] ];
+	w1=sz[v][0]; w2=sz[v][1]; w3=sz[v][2]; h2=w2+20; wa=w1+w2+w3+40;
+
+	document.write(
+'<table cellpadding="2" cellspacing="0" border="0" width="'+wa+'">'+
+'<tr>'+
+'	<td width="'+w1+'" class="hdr">'+
+'		<div id="Top1" class="hdr">Tracks</div>'+
+'	</td>'+
+'	<td width="'+w2+'" class="hdr">'+
+'		<div id="Top2" class="hdr">Pick a track from list.</div>'+
+'	</td>'+
+'	<td width="'+w3+'" class="hdr">'+
+'		<table class="hdr" width="'+w3/3+'"><tr>'+
+'			<td class="hdr"><div id="Top3" class="hdr" width="'+w3/3+'">View</div></td>'+
+'			<td class="hdr"><a id="prev" href="" class="btn">&lt;&lt;</a></td>'+
+'			<td class="hdr"><a id="next" href="" class="btn">&gt;&gt;</a></td>'+
+//'			<input id="prev" type="button" value="&lt;&lt;"/>'+
+//'			<input id="next" type="button" value="&gt;&gt;"/>'+
+'		</tr></table>'+
+'	</td>'+
+'</tr>'+
+'<tr>'+
+'	<td width="'+w1+'">'+
+'		<div id="Col1" style="overflow:scroll; width:'+w1+'px;height:'+w3+'px"></div>'+
+'	</td>'+
+'	<td class="top" width="'+w2+'">'+
+'		<div id="Col2">'+
+'			<img id="ter" src="" alt="" title="" width="'+w2+'" height="'+w2+'"/>'+
+'			<img id="road" src="" alt="Minimap" title="2D Minmap, road and terrain" width="'+w2+'" height="'+w2+'"/>'+
+'			<div id="Stats"></div>'+
+'		</div>'+
+'	</td>'+
+'	<td class="top" width="'+w3+'">'+
+'		<div id="Col3">'+
+'			<img id="view" src="" alt="View" title="Track 3D view" width="'+w3+'" height="'+w3+'"/>'+
+'		</div>'+
+'	</td>'+
+'</tr>'+
+'</table>');
+	
+	document.getElementById("Stats").style.top = w2+20+"px";
 	if (id != '')
 		document.getElementById("Top2").innerHTML = id;
 
 
-	//  config ----
-	slnk = 'index.html?id=';
-	// repo urls
+	function alphabetical(A, B)
+	{
+			if (A < B){  return -1;  }
+		else if (A > B){  return  1;  }
+		else {  return 0;  }
+	}
+
+
+	//  config  repo url  ----
 	raw = "https://raw.github.com/stuntrally/";
 	trks = raw+"tracks/master/";
 
 	adiff = new Array("Test Easy","Very Easy","Easy","Medium","Hard","Very Hard","Extreme","Ultra");
+	
+	function lnk(s)
+	{
+		return 'index.html?id='+s+'&v='+v;
+	}
 
 
 	if (window.XMLHttpRequest)
@@ -110,21 +129,19 @@
 	{
 		if (xh.readyState == 4 && xh.status == 200)
 		{
-			//document.write(xh.responseText);
-
 			xmlDoc = xh.responseXML;
 			txt = "";
 			x = xmlDoc.getElementsByTagName("track");
 			ar = new Array();
 			for (i = 0; i < x.length; i++)
 			{
-				//n name created crtver modified scenery author
-				//objects fluids bumps jumps loops pipes banked frenzy long  diff rating
+				//created crtver modified author
+				//objects fluids bumps jumps loops pipes banked frenzy long
 				name = x[i].getAttribute('name');
 				if (name == id)
 				{
 					sc = x[i].getAttribute('scenery');
-					num = x[i].getAttribute('n');
+					//num = x[i].getAttribute('n');
 					rat = x[i].getAttribute('rating');
 					diff = x[i].getAttribute('diff');
 
@@ -143,16 +160,21 @@
 			}
 			ar.sort(alphabetical);
 			
-			for (var n=0; n < ar.length; n++)
+			l = ar.length, q = -1;
+			for (var n=0; n < l; n++)
 			{
-				if (ar[n] == id)  txt = txt + "<a class='sel'";
+				if (ar[n] == id)  {  txt = txt + "<a class='sel'";  q = n;  }
 				else  txt = txt + "<a ";
-				txt = txt + "href='"+slnk+ar[n]+"'>" + ar[n] + "</a>";
+				txt = txt + "href='"+lnk(ar[n])+"' id='"+ar[n]+"'>" + ar[n] + "</a>";
 				txt = txt + "<br/>";
 			}
+			if (q-1 >=0) document.getElementById("prev").href = lnk(ar[q-1]);
+			if (q+1 < l) document.getElementById("next").href = lnk(ar[q+1]);
 
-			//document.getElementById("Top1").innerHTML = 'Tracks all: ' + x.length + '<br/>';
-			document.getElementById("Col1").innerHTML = txt;
+			list = document.getElementById("Col1");
+			list.innerHTML = txt;
+			if (id != '')  // center
+				list.scrollTop = document.getElementById(id).offsetTop - w3/2;
 		}
 	}
 
