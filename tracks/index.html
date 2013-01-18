@@ -48,9 +48,9 @@
 	//  get id from url
 	function getPar(name)
 	{
-		ch = "[\\?&]"+name+"=([^&#]*)";
-		re = new RegExp(ch);
-		sr = re.exec(window.location.href);
+		var ch = "[\\?&]"+name+"=([^&#]*)";
+		var re = new RegExp(ch);
+		var sr = re.exec(window.location.href);
 
 		if (sr != null)  return sr[1];
 		else  return "";
@@ -84,15 +84,15 @@
 			{
 				//created crtver modified author
 				//objects fluids bumps jumps loops pipes banked frenzy long
-				name = x[i].getAttribute('name');
+				var name = x[i].getAttribute('name');
 				if (name == id)
 				{
-					sc = x[i].getAttribute('scenery');
-					//num = x[i].getAttribute('n');
-					rat = x[i].getAttribute('rating');
-					diff = x[i].getAttribute('diff');
+					var sc = x[i].getAttribute('scenery');
+					//var num = x[i].getAttribute('n');
+					var rat = x[i].getAttribute('rating');
+					var diff = x[i].getAttribute('diff');
 
-					t = trks + id + "/preview/";
+					var t = trks + id + "/preview/";
 					document.getElementById("view").src = t+"view.jpg";
 					document.getElementById("ter").src = t+"terrain.jpg";
 					document.getElementById("road").src = t+"road.png";
@@ -107,7 +107,7 @@
 			}
 			ar.sort();
 			
-			l = ar.length, q = -1;
+			var l = ar.length, q = -1;
 			for (var n = 0; n < l; ++n)
 			{
 				if (ar[n] == id)  {  txt = txt + "<li class='sel'><a";  q = n;  }
@@ -117,7 +117,7 @@
 			if (q-1 >=0) document.getElementById("prev").href = lnk(ar[q-1]);
 			if (q+1 < l) document.getElementById("next").href = lnk(ar[q+1]);
 
-			list = document.getElementById("tracks");
+			var list = document.getElementById("tracks");
 			list.innerHTML = txt;
 			if (id != '')  // center
 				list.scrollTop = document.getElementById(id).offsetTop - 100;
