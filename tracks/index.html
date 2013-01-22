@@ -6,19 +6,23 @@
 	<style type="text/css">
 		html, body, #container, .content-row, .content-row:first-child { height: 100%; }
 		body { background-color: #E0F0FF; font-family:Sans-Serif; }
-		#container { position: absolute; top: 0px; bottom: 0px; }
+		#container { display: none; position: absolute; top: 0px; bottom: 0px; }
 		img { width: 100%; }
 		#road { margin-top: -100% }
-		#tracks { overflow: auto; height: 90%; list-style: none; }
+		#tracks { overflow: auto; height: 90%; list-style: none; margin: 2px; }
 		li { font-size: 0.8em; margin-left: 0px; }
 		.sel { background-color: #AEA; border-radius: 7px; }
+		#headerline div { padding: 5px; background-color: #BDF; border-radius: 5px; }
+		#headerline { margin: 8px 0px; }
 		#view { max-width: 768px; }
+		#stats { margin-top: 10px; }
 	</style>
 </head>
 <body>
 
+<h2 id="loading">Track browser loading...</h2>
 <div id="container" class="container-fluid">
-	<div class="row-fluid">
+	<div id="headerline" class="row-fluid">
 		<div class="span2">Tracks</div>
 		<div class="span3" id="track-title">Pick a track form the list...</div>
 		<div class="span7">
@@ -34,7 +38,11 @@
 		<div class="span3">
 			<img id="ter" src="" alt="" title="" />
 			<img id="road" src="" alt="Minimap" title="2D Minimap, road and terrain" />
-			<div id="stats"></div>
+			<div id="stats">
+				<p>Scenery: <span id="scenery"></span></p>
+				<p>Rating: <span id="rating"></span></p>
+				<p>Difficulty: <span id="difficulty"></span></p>
+			</div>
 		</div>
 		<div class="span7">
 			<img id="view" src="" alt="View" title="Track 3D view" />
@@ -90,26 +98,19 @@
 				var name = x[i].getAttribute('name');
 				if (name == id)
 				{
-					var sc = x[i].getAttribute('scenery');
-					//var num = x[i].getAttribute('n');
-					var rat = x[i].getAttribute('rating');
-					var diff = x[i].getAttribute('diff');
-
 					var t = trks + id + "/preview/";
-					document.getElementById("view").src = t+"view.jpg";
-					document.getElementById("ter").src = t+"terrain.jpg";
-					document.getElementById("road").src = t+"road.png";
+					document.getElementById("view").src = t + "view.jpg";
+					document.getElementById("ter").src = t + "terrain.jpg";
+					document.getElementById("road").src = t + "road.png";
 
-					document.getElementById("stats").innerHTML =
-						//"Number: "+num+"<br/>"+
-						"Scenery: "+sc+"<br/><br/>"+
-						"Rating: "+rat+"<br/><br/>"+
-						"Difficulty: "+adiff[diff]+"<br/>";
+					document.getElementById("scenery").innerHTML = x[i].getAttribute('scenery');
+					document.getElementById("rating").innerHTML = x[i].getAttribute('rating');
+					document.getElementById("difficulty").innerHTML = adiff[x[i].getAttribute('diff')];
 				}
 				ar.push(name);
 			}
 			ar.sort();
-			
+
 			var l = ar.length, q = -1;
 			for (var n = 0; n < l; ++n)
 			{
@@ -124,6 +125,9 @@
 			list.innerHTML = txt;
 			if (id != '')  // center
 				list.scrollTop = document.getElementById(id).offsetTop - 100;
+
+			document.getElementById("loading").style.display = "none";
+			document.getElementById("container").style.display = "block";
 		}
 	}
 
