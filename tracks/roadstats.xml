@@ -2,6 +2,8 @@
 <stats track="0W1-cross" time="70.0" height="13.4444" length="2285.54" onTer="0" pipes="0" width="7.976" />
 <stats track="0W10-Whirl" time="80.5" height="68.3388" length="2130.17" onTer="21.8951" pipes="0" width="8.304" />
 <stats track="0W11-Glacier" time="150.0" height="157.824" length="5138.76" onTer="24.0673" pipes="0" width="10.228" />
+<stats track="0W12-Peaks" time="38.0" height="49.7003" length="1056.62" onTer="100" pipes="0" width="15.2405" />
+<stats track="0W13-MtFog" time="108.0" height="11.5307" length="1412.38" onTer="10.3417" pipes="0" width="8.85423" />
 <stats track="0W2-Wet" time="78.5" height="22.6131" length="2610.98" onTer="0" pipes="0" width="9.32" />
 <stats track="0W3-mouth" time="41.5" height="29.6648" length="1384.87" onTer="0" pipes="0" width="9.62256" />
 <stats track="0W4-ice-blur" time="32.6" height="2.73258" length="530.823" onTer="0" pipes="0" width="13" />
@@ -20,6 +22,7 @@
 <stats track="C1-Hairpins" time="74.0" height="59.4427" length="1916.15" onTer="0" pipes="0" width="8.10393" />
 <stats track="C2-CanyonRun" time="76.4" height="32.115" length="3255.17" onTer="6.35826" pipes="0" width="8.48495" />
 <stats track="C3-Vast" time="288.0" height="165.66" length="13114.1" onTer="4.19859" pipes="0" width="9.04799" />
+<stats track="C4-Sway" time="161.0" height="113.423" length="5636.6" onTer="3.56779" pipes="0" width="11.4314" />
 <stats track="D1-simple" time="77.0" height="15.1697" length="2751.16" onTer="0" pipes="0" width="8.42651" />
 <stats track="D10-MudBath" time="141.0" height="15.3139" length="2728.95" onTer="0" pipes="0" width="6.2848" />
 <stats track="D11-PersianCity" time="64.0" height="6.72892" length="1295.53" onTer="0" pipes="0" width="6.83596" />
@@ -56,6 +59,8 @@
 <stats track="G5-Climb" time="245.0" height="226.249" length="8102.21" onTer="51.1453" pipes="0" width="9.51817" />
 <stats track="I1-star3" time="58.0" height="5.34618" length="1699.4" onTer="0" pipes="0" width="10.8946" />
 <stats track="I10-Treasure" time="94.0" height="12.6395" length="2239.68" onTer="0" pipes="0" width="8.47762" />
+<stats track="I11-StuntIslands" time="310.0" height="43.1246" length="10255" onTer="45.8753" pipes="3.36019" width="8.36026" />
+<stats track="I12-Beach" time="51.0" height="19.7588" length="1209.53" onTer="11.9634" pipes="0" width="8.60113" />
 <stats track="I2-S8" time="43.1" height="7.07426" length="1304.67" onTer="0" pipes="0" width="8.0696" />
 <stats track="I3-Islands" time="118.5" height="15.6838" length="3477.54" onTer="18.2452" pipes="7.32573" width="7.16299" />
 <stats track="I4-Sunset" time="60.1" height="11.4669" length="1675.29" onTer="0" pipes="0" width="7.336" />
@@ -88,6 +93,8 @@
 <stats track="mosport" time="100.0" height="0" length="3932.95" onTer="100" pipes="0" width="9.528" />
 <stats track="O1-Moss" time="44.0" height="54.1553" length="1415.64" onTer="0" pipes="0" width="8.90156" />
 <stats track="O2-Mouse" time="61.0" height="20.8076" length="1661.17" onTer="0" pipes="0" width="9.56948" />
+<stats track="O3-Air" time="0" height="38.9533" length="1069.6" onTer="5.01097" pipes="0" width="8.99913" />
+<stats track="R1-Mars" time="136.0" height="68.6003" length="4976.54" onTer="14.1774" pipes="0" width="10.9143" />
 <stats track="ruudskogen" time="74.0" height="0" length="3194.07" onTer="100" pipes="0" width="8.24" />
 <stats track="S10-Pipe88" time="67.3" height="66.8277" length="3033.85" onTer="100" pipes="100" width="12.4304" />
 <stats track="S12-Infinity" time="103.0" height="157.498" length="3860.38" onTer="100" pipes="100" width="9.7664" />
@@ -106,6 +113,7 @@
 <stats track="T3-Orange" time="61.0" height="22.7814" length="2554.1" onTer="0" pipes="0" width="8.93997" />
 <stats track="T4-Scary" time="115.0" height="61.2187" length="2986.57" onTer="9.32872" pipes="0" width="7.61134" />
 <stats track="T5-Twister" time="63.0" height="176.148" length="1089.3" onTer="100" pipes="0" width="6" />
+<stats track="T6-Sunset" time="90.0" height="17.4844" length="2346.13" onTer="10.9025" pipes="0" width="7" />
 <stats track="Test1-Flat" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
 <stats track="Test10-FlatPerf" time="0" height="11.5796" length="1211.76" onTer="0" pipes="0" width="11.016" />
 <stats track="Test11-Jumps" time="0" height="13.2213" length="2127.77" onTer="10.7306" pipes="0" width="9.69354" />
@@ -127,10 +135,13 @@
 <stats track="V1-Dark" time="33.5" height="8.47402" length="1139.21" onTer="0" pipes="0" width="6.776" />
 <stats track="V2-Volcanic" time="219.0" height="55.3883" length="5833.15" onTer="14.841" pipes="0" width="7.416" />
 <stats track="V3-Crater" time="56.8" height="62.3533" length="1790.21" onTer="66.9082" pipes="0" width="9.30085" />
+<stats track="V4-Spikeland" time="78.0" height="35.814" length="1447.84" onTer="14.1947" pipes="0" width="7" />
+<stats track="V5-Sad" time="168.0" height="34.0249" length="4327.26" onTer="17.1717" pipes="10.7185" width="7.29247" />
 <stats track="virginia" time="126.0" height="0" length="5264.2" onTer="100" pipes="0" width="8.656" />
 <stats track="weekend" time="113.5" height="0" length="4934.87" onTer="100" pipes="0" width="13.7503" />
 <stats track="X1-Magic" time="47.8" height="42.7623" length="1387.8" onTer="8.61014" pipes="17.0854" width="15.6135" />
 <stats track="X2-Swirl" time="109.5" height="186.705" length="3308.61" onTer="55.3843" pipes="52.6111" width="9.63733" />
 <stats track="X3-Cloud" time="130.0" height="59.1108" length="4839.72" onTer="1.72483" pipes="0" width="24.5818" />
+<stats track="X4-Pipeline" time="250.0" height="89.9379" length="7888.7" onTer="53.689" pipes="69.8063" width="11.6182" />
 <stats track="zandvoort" time="114.0" height="0" length="4371.82" onTer="100" pipes="0" width="10.2556" />
 </roadstats>
