@@ -63,12 +63,16 @@
 	// sizes: col list, mini size, view size
 	sz = [ [100,100,400],[100,200,600],[100,300,800] ];
 	w1=sz[v][0]; w2=sz[v][1]; w3=sz[v][2]; h2=w2+20; wa=w1+w2+w3+40;
+    url2 = "http://stuntrally.github.io/cars/";
 
 	document.write(
 '<table cellpadding="2" cellspacing="0" border="0" width="'+wa+'">'+
 '<tr>'+
-'	<td width="'+w1+'" class="hdr">'+
-'		<div id="Top1" class="hdr">Tracks</div>'+
+'	<td width="'+w1/2+'" class="hdr">'+
+'		<table class="hdr"><tr>' +
+'	    	<td class="hdr"><div id="Top1" class="hdr">Tracks</div></td>' +
+'		    <td class="hdr"><a href="'+url2+'">Cars</a></td>' +
+'		</tr></table>' +
 '	</td>'+
 '	<td width="'+w2+'" class="hdr">'+
 '		<div id="Top2" class="hdr">Pick a track from list.</div>'+

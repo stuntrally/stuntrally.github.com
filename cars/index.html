@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>browser</title>
+	<style type="text/css">
+		body,table,tr,td,div
+		{	color: #000000; background-color: #E0F0FF;  font-size:10px;  font-family:Sans-Serif;  }
+		a:link
+		{	color: #000000; background-color: #90B0E0;  text-decoration:none;  }
+		a:visited
+		{	color: #000000; background-color: #C8E0F8;  text-decoration:none;  }
+		a:hover
+		{	color: #000000; background-color: #FFC040;  text-decoration:none;  }
+		a:active
+		{	color: #000060; background-color: #E0E0E0;  text-decoration:none;  }
+		a.sel
+		{	color: #000060; background-color: #A0E080;  text-decoration:none;  }
+		input.btn
+		{	color: #D0F0FF; background-color: #90A0B0;  text-decoration:none;  width:70px;  }
+		input.btn2
+		{	color: #dff6be; background-color: #A0E080;  text-decoration:none;  }
+		input.btnT
+		{	color: #FFC040; background-color: #6c5302;  text-decoration:none;  }
+
+		td.top {  vertical-align:top;  }
+		div.hdr  {  height: 16px;  vertical-align:bottom;  font-size:12px;  font-family:Sans-Serif;
+			color: #000000; background-color: #A0C0E0;  }
+		td.hdr, table.hdr  {
+			color: #000000; background-color: #B0D0F0;  }
+			
+		#Col2	  {  position:relative;  }
+		#Col2 img {  position:absolute;  top:0;  left:0;  }
+		#Col2 div {  position:absolute;  top:40px;  left:0;  font-size:12px;  font-family:Sans-Serif;
+			color: #403060;  }
+			
+		td.t1  { height:11px; font-size:11px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:16px; }
+		td.r1  { height:12px; font-size:11px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; text-align:right; }
+		td.t2  { height:12px; font-size:12px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; padding-left:5px; }
+		td.r2  { height:12px; font-size:12px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; text-align:right; }
+
+		td.t3  { height:10px; font-size:10px;  font-family:Sans-Serif; margin:0; padding:5px; vertical-align:top; }
+		td.r3  { height:10px; font-size:10px;  font-family:Sans-Serif; margin:0; padding:5px; text-align:right; vertical-align:top; }
+		td.h1  { height:5px; margin:0; padding:0; }
+		
+	</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+    //  get id from url
+    function getPar(name) {
+        ch = "[\\?&]" + name + "=([^&#]*)";
+        re = new RegExp(ch);
+        sr = re.exec(window.location.href);
+
+        if (sr != null) return sr[1];
+        else return "";
+    }
+
+    id = getPar('id');  // trk name
+    v = getPar('v');  // view size
+    if (v == '') v = 1;
+    sim = getPar('sim');  // sim mode
+    if (sim == '') sim = 'easy';
+
+
+    // sizes: col list, mini size, view size
+    sz = [[100, 150, 350], [100, 230, 500], [100, 300, 800]];
+    w1 = sz[v][0]; w2 = sz[v][1]; w3 = sz[v][2]; h2 = w2 + 20; wa = w1 + w2 + w3 + 40;
+    url2 = "http://stuntrally.github.io/tracks/";
+
+    document.write(
+'<table cellpadding="2" cellspacing="0" border="0" width="' + wa + '">' +
+'<tr>' +
+'	<td width="' + w1/2 + '" class="hdr">' +
+'		<table class="hdr"><tr>' +
+'	    	<td class="hdr"><div id="Top1" class="hdr">Cars</div></td>' +
+'		    <td class="hdr"><a class="btnT" href="'+url2+'">Tracks</a></td>' +
+'		</tr></table>' +
+'	</td>' +
+'	<td width="' + w2 + '" class="hdr">' +
+'		<div id="Top2" class="hdr">Pick a car from list.</div>' +
+'	</td>' +
+'	<td width="' + w3 + '" class="hdr">' +
+'		<table class="hdr"><tr>' +
+'			<td class="hdr" width="' + w3 / 4 + '><div id="Top3" class="hdr">View</div></td>' +
+'			<td class="hdr"><input id="prev" type="button" class="btn" value="&lt;&lt;"/></td>' +
+'			<td class="hdr"><input id="next" type="button" class="btn" value="&gt;&gt;"/></td>' +
+'			<td class="hdr" width="' + w3 / 6 + '><div id="Top3" class="hdr"></div></td>' +
+'			<td class="hdr"><input id="easy" type="button" class="btn2" value="easy"/></td>' +
+'			<td class="hdr"><input id="norm" type="button" class="btn2" value="normal"/></td>' +
+'		</tr></table>' +
+'	</td>' +
+'</tr>' +
+'<tr>' +
+'	<td width="' + w1 + '">' +
+'		<div id="Col1" style="overflow:scroll; width:' + w1 + 'px;height:' + w3 + 'px"></div>' +
+'	</td>' +
+'	<td class="top" width="' + w2 + '">' +
+'		<div id="Col2">' +
+'			<div id="Stats">' +
+'<table><tr>' +
+'	<td class="r1">Type</td>	<td class="t2" id="type" colspan="2"></td> </tr><tr>' +
+'	<td class="r1">Speed</td>	<td class="t2" id="speed" colspan="2"></td> </tr><tr>' +
+'	<td class="r1">Year</td>	<td class="t2" id="year" colspan="2"></td> </tr><tr>' +
+'<td class="h1"><br/></td> </tr><tr>' +
+'	<td class="r3" id="stats1">Stats</td>	<td class="t3" id="stats2"></td>	</tr>' +
+'</table></div>' +
+'		</div>' +
+'	</td>' +
+'	<td class="top" width="' + w3 + '">' +
+'		<div id="Col3">' +
+'			<img id="view" src="" alt="View" title="Car 3D view" width="' + w3 + '" height="' + w3 + '"/>' +
+'		</div>' +
+'	</td>' +
+'</tr>' +
+'</table>');
+
+    if (id != '')
+        document.getElementById("Top2").innerHTML = id;
+
+
+    //  utility
+    function alphabetical(A, B) {
+        if (A < B) { return -1; }
+        else if (A > B) { return 1; }
+        else { return 0; }
+    }
+
+    function set(id, val) {
+        document.getElementById(id).innerHTML = val;
+    }
+
+
+    //  config  repo url  ----
+    cars = "https://raw.github.com/stuntrally/stuntrally/master/data/cars/_previews/";
+
+    function lnk(s,si) {
+        if (si != "easy")
+            return '?id=' + s + '&v=' + v + '&sim=' + si;
+        else
+            return '?id=' + s + '&v=' + v;
+    }
+
+
+    //  car
+    if (window.XMLHttpRequest) {
+        xh = new XMLHttpRequest();
+    } else  // IE5,6
+    { xh = new ActiveXObject("Microsoft.XMLHTTP"); }
+
+    xh.onreadystatechange = function () {
+        if (xh.readyState == 4 && xh.status == 200) {
+            xmlDoc = xh.responseXML;
+            x = xmlDoc.getElementsByTagName("car");
+            txt = "";
+            ar = [];
+            for (i = 0; i < x.length; i++) {
+                //crtver
+                name = x[i].getAttribute('id');
+                if (name == id) {
+                    //crtver
+                    type = x[i].getAttribute('type');
+                    speed = x[i].getAttribute('speed');
+                    year = x[i].getAttribute('year');
+
+                    document.getElementById("view").src = cars + id + ".jpg";
+
+                    set("type", type);
+                    set("speed", speed);
+                    set("year", year);
+                }
+                ar.push(name);
+            }
+            ar.sort(alphabetical);
+
+            l = ar.length, q = -1;
+            for (n = 0; n < l; n++) {
+                if (ar[n] == id) { txt = txt + "<a class='sel'"; q = n; }
+                else txt = txt + "<a ";
+                txt = txt + "href='" + lnk(ar[n], sim) + "' id='" + ar[n] + "'>" + ar[n] + "</a>";
+                txt = txt + "<br/>";
+            }
+            if (q - 1 >= 0) document.getElementById("prev").onclick = function () { window.location = lnk(ar[q - 1], sim); }
+            if (q + 1 < l) document.getElementById("next").onclick = function () { window.location = lnk(ar[q + 1], sim); }
+
+            document.getElementById("easy").onclick = function () { window.location = lnk(ar[q], "easy"); }
+            document.getElementById("norm").onclick = function () { window.location = lnk(ar[q], "norm"); }
+
+            list = document.getElementById("Col1");
+            list.innerHTML = txt;
+            if (id != '')  // center
+                list.scrollTop = document.getElementById(id).offsetTop - w3 / 2;
+        }
+    }
+
+    xh.open("GET", "cars.xml", false);
+    xh.send();
+
+
+    if (window.XMLHttpRequest) {
+        xr = new XMLHttpRequest();
+    } else  // IE5,6
+    { xr = new ActiveXObject("Microsoft.XMLHTTP"); }
+
+    xr.onreadystatechange = function () {
+        if (xr.readyState == 4 && xr.status == 200) {
+
+            fileTxt = this.responseText;
+            lines = fileTxt.split('\n');
+            n = lines.length;
+
+            tab1 = '', tab2 = '';
+            //tab1 = '<table>', tab2 = '<table>';
+
+            for (i = 0; i < n; i++) {
+                var row = lines[i];
+                if (i % 2==0)
+                        tab1 += row + '<br/>';
+                    else
+                        tab2 += row + '<br/>';
+                    //tab1 += '<tr class="t1">' + row + '</tr><br/>';
+                //else
+                //    tab2 += '<tr class="t1">' + row + '</tr><br/>';
+            }
+            //tab1 += '</table>'; tab2 += '</table>';
+            set("stats1", tab1);
+            set("stats2", tab2);
+        }
+    }
+
+    xr.open("GET", sim+"/"+id+"_stats.txt", true);
+    xr.send();
+
+</script>
+
+</body>
+</html>
