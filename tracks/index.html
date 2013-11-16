@@ -64,16 +64,16 @@
 	// sizes: col list, mini size, view size
 	sz = [ [100,100,400],[100,200,600],[100,300,800] ];
 	w1=sz[v][0]; w2=sz[v][1]; w3=sz[v][2];
-    h2=w2+10; wa=w1+w2+w3+40; wb=w1+50;
-    url2 = "http://stuntrally.github.io/cars/";
+	h2=w2+10; wa=w1+w2+w3+40; wb=w1+50;
+	url2 = "cars/";
 
 	document.write(
 '<table cellpadding="2" cellspacing="0" border="0" width="'+wa+'">'+
 '<tr>'+
 '	<td width="'+w1/2+'" class="hdr">'+
 '		<table class="hdr"><tr>' +
-'	    	<td class="hdr"><div id="Top1" class="hdr">Tracks</div></td>' +
-'		    <td class="hdr"><a href="'+url2+'">Cars</a></td>' +
+'			<td class="hdr"><div id="Top1" class="hdr">Tracks</div></td>' +
+'			<td class="hdr"><a href="'+url2+'">Cars</a></td>' +
 '		</tr></table>' +
 '	</td>'+
 '	<td width="'+w2+'" class="hdr">'+
@@ -128,10 +128,10 @@
 '	<td class="top" width="'+w3+'">'+
 '		<div id="Col3">'+
 '			<div id="StBtm" class="btm"> <table><tr>'+
-'				<td class="t1">Author(s)</td>   <td class="t1" id="auth" width="150"></td>'+
-'				<td class="t1">In version</td>  <td class="t1" id="ver" width="20"></td>'+
+'				<td class="t1">Author(s)</td>	<td class="t1" id="auth" width="150"></td>'+
+'				<td class="t1">In version</td>	<td class="t1" id="ver" width="20"></td>'+
 '				<td class="t1">Created date</td><td class="t1" id="crt" width="50"></td>'+
-'				<td class="t1">modified</td>    <td class="t1" id="mod" width="50"></td>'+
+'				<td class="t1">modified</td>	<td class="t1" id="mod" width="50"></td>'+
 '			</tr></table> </div>'+
 '			<img id="view" src="" alt="View" title="Track 3D view" width="'+w3+'" height="'+w3+'"/>'+
 '		</div>'+
@@ -199,42 +199,42 @@
 		if (xh.readyState == 4)
 		{
 			ar = [];
-		    ln = xh.responseText.split("\n");
-		    for (l = 0; l < ln.length; l++)
-            {
-                t = ln[l];
-                if (t && t.length > 0 && /\d/.test(t.charAt(0)))
-                {
-                    t = t.replace(/\s{2,}/g, ' ');
-                    t = t.split(' ');
-                    //if (t.length = 18)
-                    nn = t[0].split(',');
+			ln = xh.responseText.split("\n");
+			for (l = 0; l < ln.length; l++)
+			{
+				t = ln[l];
+				if (t && t.length > 0 && /\d/.test(t.charAt(0)))
+				{
+					t = t.replace(/\s{2,}/g, ' ');
+					t = t.split(' ');
+					//if (t.length = 18)
+					nn = t[0].split(',');
 
-                    name = nn[1];
-                    ar.push(name);
-                    if (name == id)
-                    {
-			            p = trks + id + "/preview/";
-			            document.getElementById("view").src = p+"view.jpg";
-			            document.getElementById("ter").src = p+"terrain.jpg";
-			            document.getElementById("road").src = p+"road.png";
+					name = nn[1];
+					ar.push(name);
+					if (name == id)
+					{
+						p = trks + id + "/preview/";
+						document.getElementById("view").src = p+"view.jpg";
+						document.getElementById("ter").src = p+"terrain.jpg";
+						document.getElementById("road").src = p+"road.png";
 
-			    		set("scene",t[4].substr(1));
-			    		set("rate",t[15].substr(2));
-			    		set("diff",adiff[t[14].substr(2)]);
+						set("scene",t[4].substr(1));
+						set("rate",t[15].substr(2));
+						set("diff",adiff[t[14].substr(2)]);
 
-                        set("auth",t[17].substr(2).replace("CH","CryHam"));
-                        set("ver",t[1].substr(2));
-                        set("crt",t[2]);  set("mod",t[3]);
+						set("auth",t[17].substr(2).replace("CH","CryHam"));
+						set("ver",t[1].substr(2));
+						set("crt",t[2]);  set("mod",t[3]);
 
-					    for (d = 0; d < td.length; d++)
-					    {
-						    s = t[d+5].substr(d==0?3:2);
-						    if (s=='0') s='';
-						    set(td[d], s);
-					    }
-                    }
-            }   }
+						for (d = 0; d < td.length; d++)
+						{
+							s = t[d+5].substr(d==0?3:2);
+							if (s=='0') s='';
+							set(td[d], s);
+						}
+					}
+			}   }
 
 			ar.sort(alphabetical);
 			
@@ -276,21 +276,21 @@
 			{
 				name = x[i].getAttribute('n');
 				if (name == id)
-				{
+				{							//par
 					ti = x[i].getAttribute('t') -3;  if (ti < 2)  ti = 0.001;
-													 set("time",t2s(ti));  //par
+													set("time",t2s(ti));
 					len = x[i].getAttribute('l');	set("length",f2s(len/1000,1));
 					vel = len/ti*3.6;  if (ti < 2)  vel = 0;
-														set("avgVel",f2s(vel,0));
-					h = x[i].getAttribute('h');	set("height",f2s(h,0));
+													set("avgVel",f2s(vel,0));
+					h = x[i].getAttribute('h');		set("height",f2s(h,0));
 					w = x[i].getAttribute('w');		set("width",f2s(w,1));
 
 					ot = x[i].getAttribute('ot');	set("inAir",f2s(ot,0));
 					pp = x[i].getAttribute('p');	set("inPipe",f2s(pp,0));
 					op = x[i].getAttribute('op');	set("onPipe",f2s(op,0));
 
-                    ba = x[i].getAttribute('ba');	set("bnkAvg",f2s(ba,0));
-                    bm = x[i].getAttribute('bm');	set("bnkMax",f2s(bm,0)+"°");
+					ba = x[i].getAttribute('ba');	set("bnkAvg",f2s(ba,0));
+					bm = x[i].getAttribute('bm');	set("bnkMax",f2s(bm,0)+"°");
 				}
 			}
 	}	}
