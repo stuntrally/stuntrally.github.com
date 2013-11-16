@@ -20,6 +20,7 @@
 		{	color: #D0F0FF; background-color: #90A0B0;  text-decoration:none;  width:70px;  }
 
 		td.top {  vertical-align:top;  }
+		div.btm {  vertical-align:bottom;  }
 		div.hdr  {  height: 16px;  vertical-align:bottom;  font-size:12px;  font-family:Sans-Serif;
 			color: #000000; background-color: #A0C0E0;  }
 		td.hdr, table.hdr  {
@@ -30,8 +31,8 @@
 		#Col2 div {  position:absolute;  top:220px;  left:0;  font-size:12px;  font-family:Sans-Serif;
 			color: #403060;  }
 			
-		td.t1  { height:11px; font-size:11px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:16px; }
-		td.r1  { height:12px; font-size:11px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; text-align:right; }
+		td.t1  { height:10px; font-size:10px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:16px; }
+		td.r1  { height:11px; font-size:11px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; text-align:right; }
 		td.t2  { height:12px; font-size:12px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; }
 		td.r2  { height:12px; font-size:12px;  font-family:Sans-Serif; margin:0; padding:0; padding-right:2px; text-align:right; }
 		td.t3  { height:11px; font-size:11px;  font-family:Sans-Serif; margin:0; padding:0; }
@@ -62,7 +63,8 @@
 
 	// sizes: col list, mini size, view size
 	sz = [ [100,100,400],[100,200,600],[100,300,800] ];
-	w1=sz[v][0]; w2=sz[v][1]; w3=sz[v][2]; h2=w2+20; wa=w1+w2+w3+40;
+	w1=sz[v][0]; w2=sz[v][1]; w3=sz[v][2];
+    h2=w2+10; wa=w1+w2+w3+40; wb=w1+50;
     url2 = "http://stuntrally.github.io/cars/";
 
 	document.write(
@@ -108,8 +110,9 @@
 '		<td class="h1"></td> </tr><tr>'+
 '	<td class="t1">In air</td>	<td class="r2" id="inAir"></td>		<td class="t3">%</td> </tr><tr>'+
 '	<td class="t1">Pipes</td>	<td class="r2" id="inPipe"></td>	<td class="t3">%</td> </tr><tr>'+
-'<td class="h1"><br/></td> </tr><tr>'+
-//todo img icons png..
+'	<td class="t1">On pipe</td>	<td class="r2" id="onPipe"></td>	<td class="t3">%</td> </tr><tr>'+
+'	<td class="t1">Bank.Angles</td>	<td class="r2" id="bnkAvg"></td>	<td class="t2" id="bnkMax"></td> </tr>'+
+'<td class="h1"><br/></td> </tr><tr>'+  //todo img icons png..
 '	<td class="t1">objects</td>	<td class="t1" id="objects"></td>	<td class="t3"></td> </tr><tr>'+
 '	<td class="t1">fluids</td>	<td class="t1" id="fluids"></td>	<td class="t3"></td> </tr><tr>'+
 '	<td class="t1">bumps</td>	<td class="t1" id="bumps"></td>		<td class="t3"></td> </tr><tr>'+
@@ -124,13 +127,19 @@
 '	</td>'+
 '	<td class="top" width="'+w3+'">'+
 '		<div id="Col3">'+
+'			<div id="StBtm" class="btm"> <table><tr>'+
+'				<td class="t1">Author(s)</td>   <td class="t1" id="auth" width="150"></td>'+
+'				<td class="t1">In version</td>  <td class="t1" id="ver" width="20"></td>'+
+'				<td class="t1">Created date</td><td class="t1" id="crt" width="50"></td>'+
+'				<td class="t1">modified</td>    <td class="t1" id="mod" width="50"></td>'+
+'			</tr></table> </div>'+
 '			<img id="view" src="" alt="View" title="Track 3D view" width="'+w3+'" height="'+w3+'"/>'+
 '		</div>'+
 '	</td>'+
 '</tr>'+
 '</table>');
 	
-	document.getElementById("Stats").style.top = w2+20+"px";
+	document.getElementById("Stats").style.top = h2+"px";
 	if (id != '')
 		document.getElementById("Top2").innerHTML = id;
 
@@ -171,59 +180,65 @@
 	trks = raw+"tracks/master/";
 
 	adiff = ["Test Easy","Very Easy","Easy","Medium","Hard","Very Hard","Extreme","Ultra"];
+	td = ['objects','fluids','bumps','jumps','loops','pipes','banked','frenzy','long'];
 	
 	function lnk(s)
 	{
 		return '?id='+s+'&v='+v;
 	}
-	
+
 
 	//  track
 	if (window.XMLHttpRequest)
-	{  xh = new XMLHttpRequest();
-	}else  // IE5,6
+	{  xh = new XMLHttpRequest();  }
+	else  // IE5,6
 	{  xh = new ActiveXObject("Microsoft.XMLHTTP");  }
 	
 	xh.onreadystatechange = function()
 	{
-		if (xh.readyState == 4 && xh.status == 200)
+		if (xh.readyState == 4)
 		{
-			xmlDoc = xh.responseXML;
-			x = xmlDoc.getElementsByTagName("track");
-			txt = "";
 			ar = [];
-			for (i = 0; i < x.length; i++)
-			{
-				//created crtver modified author
-				name = x[i].getAttribute('name');
-				if (name == id)
-				{
-					sc = x[i].getAttribute('scenery');
-					//num = x[i].getAttribute('n');
-					rat = x[i].getAttribute('rating');
-					diff = x[i].getAttribute('diff');
+		    ln = xh.responseText.split("\n");
+		    for (l = 0; l < ln.length; l++)
+            {
+                t = ln[l];
+                if (t && t.length > 0 && /\d/.test(t.charAt(0)))
+                {
+                    t = t.replace(/\s{2,}/g, ' ');
+                    t = t.split(' ');
+                    //if (t.length = 18)
+                    nn = t[0].split(',');
 
-					t = trks + id + "/preview/";
-					document.getElementById("view").src = t+"view.jpg";
-					document.getElementById("ter").src = t+"terrain.jpg";
-					document.getElementById("road").src = t+"road.png";
+                    name = nn[1];
+                    ar.push(name);
+                    if (name == id)
+                    {
+			            p = trks + id + "/preview/";
+			            document.getElementById("view").src = p+"view.jpg";
+			            document.getElementById("ter").src = p+"terrain.jpg";
+			            document.getElementById("road").src = p+"road.png";
 
-					set("scene",sc);
-					set("rate",rat);
-					set("diff",adiff[diff]);
+			    		set("scene",t[4].substr(1));
+			    		set("rate",t[15].substr(2));
+			    		set("diff",adiff[t[14].substr(2)]);
 
-					td = ['objects','fluids','bumps','jumps','loops','pipes','banked','frenzy','long'];
-					for (d = 0; d < td.length; d++)
-					{
-						s = x[i].getAttribute(td[d]);
-						if (s=='0') s='';
-						set(td[d], s);
-					}
-				}
-				ar.push(name);
-			}
+                        set("auth",t[17].substr(2).replace("CH","CryHam"));
+                        set("ver",t[1].substr(2));
+                        set("crt",t[2]);  set("mod",t[3]);
+
+					    for (d = 0; d < td.length; d++)
+					    {
+						    s = t[d+5].substr(d==0?3:2);
+						    if (s=='0') s='';
+						    set(td[d], s);
+					    }
+                    }
+            }   }
+
 			ar.sort(alphabetical);
 			
+			txt = "";
 			l = ar.length, q = -1;
 			for (n=0; n < l; n++)
 			{
@@ -239,17 +254,16 @@
 			list.innerHTML = txt;
 			if (id != '')  // center
 				list.scrollTop = document.getElementById(id).offsetTop - w3/2;
-		}
-	}
+	}	}
 
-	xh.open("GET", "tracks.xml", false);
+	xh.open("GET", "tracks.txt", false);
 	xh.send();
 
 
 	//  road
 	if (window.XMLHttpRequest)
-	{  xr = new XMLHttpRequest();
-	}else  // IE5,6
+	{  xr = new XMLHttpRequest();  }
+	else  // IE5,6
 	{  xr = new ActiveXObject("Microsoft.XMLHTTP");  }
 	
 	xr.onreadystatechange = function()
@@ -257,25 +271,29 @@
 		if (xr.readyState == 4 && xr.status == 200)
 		{
 			xmlDoc = xr.responseXML;
-			x = xmlDoc.getElementsByTagName("stats");
+			x = xmlDoc.getElementsByTagName("s");
 			for (i = 0; i < x.length; i++)
 			{
-				name = x[i].getAttribute('track');
+				name = x[i].getAttribute('n');
 				if (name == id)
 				{
-					ti = x[i].getAttribute('time') -3;  if (ti < 2)  ti = 0.001;
-														set("time",t2s(ti));  //par
-					len = x[i].getAttribute('length');	set("length",f2s(len/1000,1));
+					ti = x[i].getAttribute('t') -3;  if (ti < 2)  ti = 0.001;
+													 set("time",t2s(ti));  //par
+					len = x[i].getAttribute('l');	set("length",f2s(len/1000,1));
 					vel = len/ti*3.6;  if (ti < 2)  vel = 0;
 														set("avgVel",f2s(vel,0));
-					h = x[i].getAttribute('height');	set("height",f2s(h,0));
-					w = x[i].getAttribute('width');		set("width",f2s(w,1));
-					ot = x[i].getAttribute('onTer');	set("inAir",f2s(ot,0));
-					pp = x[i].getAttribute('pipes');	set("inPipe",f2s(pp,0));
+					h = x[i].getAttribute('h');	set("height",f2s(h,0));
+					w = x[i].getAttribute('w');		set("width",f2s(w,1));
+
+					ot = x[i].getAttribute('ot');	set("inAir",f2s(ot,0));
+					pp = x[i].getAttribute('p');	set("inPipe",f2s(pp,0));
+					op = x[i].getAttribute('op');	set("onPipe",f2s(op,0));
+
+                    ba = x[i].getAttribute('ba');	set("bnkAvg",f2s(ba,0));
+                    bm = x[i].getAttribute('bm');	set("bnkMax",f2s(bm,0)+"°");
 				}
 			}
-		}
-	}
+	}	}
 
 	xr.open("GET", "roadstats.xml", false);
 	xr.send();

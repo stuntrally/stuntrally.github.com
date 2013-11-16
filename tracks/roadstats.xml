@@ -1,147 +1,167 @@
 <roadstats>
-<stats track="0W1-cross" time="70.0" height="13.4444" length="2285.54" onTer="0" pipes="0" width="7.976" />
-<stats track="0W10-Whirl" time="80.5" height="68.3388" length="2130.17" onTer="21.8951" pipes="0" width="8.304" />
-<stats track="0W11-Glacier" time="150.0" height="157.824" length="5138.76" onTer="24.0673" pipes="0" width="10.228" />
-<stats track="0W12-Peaks" time="38.0" height="49.7003" length="1056.62" onTer="100" pipes="0" width="15.2405" />
-<stats track="0W13-MtFog" time="108.0" height="11.5307" length="1412.38" onTer="10.3417" pipes="0" width="8.85423" />
-<stats track="0W2-Wet" time="78.5" height="22.6131" length="2610.98" onTer="0" pipes="0" width="9.32" />
-<stats track="0W3-mouth" time="41.5" height="29.6648" length="1384.87" onTer="0" pipes="0" width="9.62256" />
-<stats track="0W4-ice-blur" time="32.6" height="2.73258" length="530.823" onTer="0" pipes="0" width="13" />
-<stats track="0W5-Circles" time="99.7" height="13.5551" length="2538.4" onTer="0" pipes="0" width="11.16" />
-<stats track="0W6-88" time="140.5" height="11.0725" length="4560.37" onTer="0" pipes="0" width="8.92536" />
-<stats track="0W7-LJs-Mntn" time="55.8" height="4.20299" length="1300.77" onTer="0" pipes="0" width="11.0313" />
-<stats track="0W8-pipe8x8" time="64.1" height="35.7396" length="2097.8" onTer="26.2495" pipes="26.2495" width="9.04" />
-<stats track="0W9-IceFrenzy" time="126.0" height="23.6143" length="3950.21" onTer="41.4463" pipes="0" width="14.0265" />
-<stats track="A1-StuntPark" time="205.0" height="43.6292" length="5470.75" onTer="68.1264" pipes="18.0132" width="8.81809" />
-<stats track="A2-PipeCoil" time="53.5" height="56.8098" length="1445.05" onTer="100" pipes="100" width="6.9837" />
-<stats track="A3-Canyon" time="179.0" height="135.453" length="5470.31" onTer="32.2495" pipes="0" width="8.83581" />
-<stats track="A4-Snake" time="113.3" height="58.8714" length="2383.23" onTer="100" pipes="100" width="16.3945" />
-<stats track="A5-TopTwist" time="182.0" height="65.8931" length="5328.53" onTer="38.3939" pipes="0" width="13.4073" />
-<stats track="A6-Cannon" time="450.0" height="339.736" length="15585.7" onTer="17.4262" pipes="0" width="9.77377" />
-<stats track="brands" time="95.0" height="0" length="4013.45" onTer="100" pipes="0" width="9.55565" />
-<stats track="C1-Hairpins" time="74.0" height="59.4427" length="1916.15" onTer="0" pipes="0" width="8.10393" />
-<stats track="C2-CanyonRun" time="76.4" height="32.115" length="3255.17" onTer="6.35826" pipes="0" width="8.48495" />
-<stats track="C3-Vast" time="288.0" height="165.66" length="13114.1" onTer="4.19859" pipes="0" width="9.04799" />
-<stats track="C4-Sway" time="161.0" height="113.423" length="5636.6" onTer="3.56779" pipes="0" width="11.4314" />
-<stats track="D1-simple" time="77.0" height="15.1697" length="2751.16" onTer="0" pipes="0" width="8.42651" />
-<stats track="D10-MudBath" time="141.0" height="15.3139" length="2728.95" onTer="0" pipes="0" width="6.2848" />
-<stats track="D11-PersianCity" time="64.0" height="6.72892" length="1295.53" onTer="0" pipes="0" width="6.83596" />
-<stats track="D12-Sandstorm" time="58.0" height="17.6169" length="1299.51" onTer="0" pipes="0" width="10.7145" />
-<stats track="D2-Mntn" time="74.5" height="57.4953" length="1656.49" onTer="18.7495" pipes="0" width="6.19049" />
-<stats track="D3-P" time="61.0" height="19.9521" length="1897" onTer="5.50849" pipes="0" width="7.42374" />
-<stats track="D4-SBridge" time="68.1" height="15.7534" length="1963.28" onTer="25.776" pipes="0" width="7.19656" />
-<stats track="D5-jump8-low" time="39.5" height="10.0455" length="1280.68" onTer="15.1344" pipes="0" width="10.3005" />
-<stats track="D6-jump0-high" time="35.6" height="13.9452" length="1182.5" onTer="20.1684" pipes="0" width="10.36" />
-<stats track="D7-CrossJumps" time="97.0" height="27.8859" length="4023.67" onTer="17.2023" pipes="0" width="8.85233" />
-<stats track="D8-Technical" time="134.3" height="25.7123" length="4992.29" onTer="12.4418" pipes="0" width="7.61403" />
-<stats track="D9-Mud" time="51.6" height="23.9306" length="1168.44" onTer="0" pipes="0" width="7.736" />
-<stats track="detroit" time="112.0" height="0" length="3434.54" onTer="100" pipes="0" width="7.688" />
-<stats track="dirt3" time="65.0" height="0" length="2206.55" onTer="100" pipes="0" width="11.408" />
-<stats track="E1-Lakes" time="120.0" height="37.1846" length="3657.12" onTer="9.30663" pipes="0" width="7.67274" />
-<stats track="F1-Slippery" time="55.5" height="9.89229" length="1596.87" onTer="0" pipes="0" width="8.208" />
-<stats track="F10-MntnTrail" time="166.3" height="82.748" length="2847.75" onTer="16.0581" pipes="0" width="7.6032" />
-<stats track="F11-Dawn" time="38.6" height="22.2048" length="860.211" onTer="0" pipes="0" width="6" />
-<stats track="F12-HighPeaks" time="310.1" height="283.984" length="6740.13" onTer="66.2516" pipes="0" width="7.94624" />
-<stats track="F13-Castle" time="114.0" height="129.922" length="2268.23" onTer="50.2015" pipes="0" width="8.66678" />
-<stats track="F14-Maze" time="232.0" height="40.178" length="3301.3" onTer="18.5263" pipes="8.84958" width="6.54781" />
-<stats track="F15-ForestTrip" time="145.0" height="70.5409" length="3520.82" onTer="9.19809" pipes="0" width="8.17092" />
-<stats track="F16-Clew" time="99.0" height="73.7972" length="1718.4" onTer="66.1376" pipes="21.9716" width="6.49464" />
-<stats track="F3-Snail" time="41.5" height="15.7095" length="1199.83" onTer="0" pipes="0" width="8.112" />
-<stats track="F4-OSquare" time="85.3" height="47.9366" length="2567.6" onTer="0" pipes="0" width="8.4" />
-<stats track="F6-DC3" time="49.5" height="29.1595" length="1878.2" onTer="0" pipes="0" width="7.16497" />
-<stats track="F7-blur3" time="37.4" height="37.3308" length="1414.5" onTer="0" pipes="0" width="7.696" />
-<stats track="F8-blurX3" time="39.5" height="9.40017" length="1165.65" onTer="0" pipes="0" width="7.944" />
-<stats track="F9-MadMntn" time="148.1" height="51.2233" length="4574.29" onTer="100" pipes="0" width="10.9476" />
-<stats track="G1-Long" time="315.3" height="237.085" length="13843.9" onTer="0" pipes="0" width="9.64662" />
-<stats track="G2-Coast" time="95.0" height="56.0444" length="3047.45" onTer="0" pipes="0" width="7.16926" />
-<stats track="G3-Butterfly" time="47.5" height="29.348" length="1099.9" onTer="0" pipes="0" width="7.51929" />
-<stats track="G4-River" time="37.0" height="10.19935" length="740.717" onTer="7.98053" pipes="0" width="6" />
-<stats track="G5-Climb" time="245.0" height="226.249" length="8102.21" onTer="51.1453" pipes="0" width="9.51817" />
-<stats track="I1-star3" time="58.0" height="5.34618" length="1699.4" onTer="0" pipes="0" width="10.8946" />
-<stats track="I10-Treasure" time="94.0" height="12.6395" length="2239.68" onTer="0" pipes="0" width="8.47762" />
-<stats track="I11-StuntIslands" time="310.0" height="43.1246" length="10255" onTer="45.8753" pipes="3.36019" width="8.36026" />
-<stats track="I12-Beach" time="51.0" height="19.7588" length="1209.53" onTer="11.9634" pipes="0" width="8.60113" />
-<stats track="I2-S8" time="43.1" height="7.07426" length="1304.67" onTer="0" pipes="0" width="8.0696" />
-<stats track="I3-Islands" time="118.5" height="15.6838" length="3477.54" onTer="18.2452" pipes="7.32573" width="7.16299" />
-<stats track="I4-Sunset" time="60.1" height="11.4669" length="1675.29" onTer="0" pipes="0" width="7.336" />
-<stats track="I5-Shore" time="84.1" height="68.7805" length="2059.97" onTer="0" pipes="0" width="7.04152" />
-<stats track="I6-Flooded" time="49.5" height="11.4099" length="1301.06" onTer="26.4574" pipes="0" width="7.17999" />
-<stats track="I7-Moses" time="64.0" height="20.2892" length="1475.12" onTer="5.26101" pipes="0" width="6.6932" />
-<stats track="I8-Pharaoh" time="77.4" height="41.7471" length="2645.16" onTer="3.35625" pipes="0" width="12.0957" />
-<stats track="I9-Web" time="350.0" height="128.254" length="13334.6" onTer="92.1942" pipes="0" width="14.3021" />
-<stats track="J1-T" time="53.4" height="11.33" length="1684.97" onTer="0" pipes="0" width="7.592" />
-<stats track="J10-Spiral" time="62.0" height="28.4339" length="1951.18" onTer="0" pipes="0" width="7.71229" />
-<stats track="J11-Temple" time="49.0" height="18.92" length="924.522" onTer="24.1299" pipes="0" width="6.74608" />
-<stats track="J12-Fog" time="59.5" height="20.0598" length="1505.88" onTer="0" pipes="0" width="6.48" />
-<stats track="J13-Tropic" time="255.2" height="86.0919" length="6843.4" onTer="16.8821" pipes="0" width="7.59461" />
-<stats track="J14-Muddy" time="50.0" height="11.2401" length="796.785" onTer="8.2106" pipes="0" width="6.12878" />
-<stats track="J15-Swamp" time="127.6" height="15.6926" length="2843.38" onTer="12.3488" pipes="0" width="5.58339" />
-<stats track="J16-MudMad" time="73.0" height="25.625" length="1105.46" onTer="18.3006" pipes="0" width="6.99487" />
-<stats track="J17-JungleCanyons" time="213.0" height="131.699" length="5947.08" onTer="4.01701" pipes="0" width="11.5313" />
-<stats track="J18-Tiny" time="35.5" height="14.715" length="817.799" onTer="4.52407" pipes="0" width="6.232" />
-<stats track="J19-demo2" time="68.0" height="78.121" length="1886.55" onTer="35.7771" pipes="16.6658" width="7.78706" />
-<stats track="J20-JungleMaze" time="290.0" height="151.766" length="7160.11" onTer="46.178" pipes="0" width="9.27012" />
-<stats track="J3-Rocky" time="53.2" height="15.7951" length="1903.7" onTer="0" pipes="0" width="8.592" />
-<stats track="J4-Pipe8" time="17.5" height="25.9128" length="877.502" onTer="98.0625" pipes="98.0625" width="12.1113" />
-<stats track="J5-Pipes" time="33.4" height="45.5938" length="1119.8" onTer="97.0848" pipes="76.7844" width="11.8079" />
-<stats track="J6-80fun" time="119.7" height="57.3765" length="3497.65" onTer="61.8316" pipes="21.7735" width="13.5925" />
-<stats track="J7-Hilly" time="59.0" height="30.1595" length="1751.18" onTer="3.32432" pipes="0" width="8.29535" />
-<stats track="J8-Round" time="75.6" height="6.78782" length="2549.31" onTer="0" pipes="0" width="7.03462" />
-<stats track="J9-Sharp" time="48.7" height="41.1979" length="1408.41" onTer="18.5818" pipes="0" width="7.91405" />
-<stats track="M1-Hills" time="40.0" height="34.66" length="942.317" onTer="0" pipes="0" width="9.776" />
-<stats track="M2-Bumps" time="66.5" height="49.3006" length="1508.03" onTer="12.3925" pipes="0" width="10.1304" />
-<stats track="mosport" time="100.0" height="0" length="3932.95" onTer="100" pipes="0" width="9.528" />
-<stats track="O1-Moss" time="44.0" height="54.1553" length="1415.64" onTer="0" pipes="0" width="8.90156" />
-<stats track="O2-Mouse" time="61.0" height="20.8076" length="1661.17" onTer="0" pipes="0" width="9.56948" />
-<stats track="O3-Air" time="0" height="38.9533" length="1069.6" onTer="5.01097" pipes="0" width="8.99913" />
-<stats track="R1-Mars" time="136.0" height="68.6003" length="4976.54" onTer="14.1774" pipes="0" width="10.9143" />
-<stats track="ruudskogen" time="74.0" height="0" length="3194.07" onTer="100" pipes="0" width="8.24" />
-<stats track="S10-Pipe88" time="67.3" height="66.8277" length="3033.85" onTer="100" pipes="100" width="12.4304" />
-<stats track="S12-Infinity" time="103.0" height="157.498" length="3860.38" onTer="100" pipes="100" width="9.7664" />
-<stats track="S13-Hole" time="93.7" height="83.189" length="3117.13" onTer="0" pipes="0" width="5.41474" />
-<stats track="S14-Refinery" time="220.0" height="69.1901" length="5328.33" onTer="83.7277" pipes="35.8204" width="8.17874" />
-<stats track="S2-Frenzy" time="208.0" height="50.7778" length="5909.14" onTer="0" pipes="0" width="7.2" />
-<stats track="S3-Loops" time="74.1" height="44.3089" length="1734.03" onTer="71.1431" pipes="0" width="6.52253" />
-<stats track="S4-Hills" time="192.8" height="110.211" length="5803.93" onTer="21.6762" pipes="0" width="7.21803" />
-<stats track="S5-LoopBasic" time="67.4" height="52.1007" length="2135.34" onTer="61.5101" pipes="21.1191" width="6.84666" />
-<stats track="S6-PipeCrazy" time="37.3" height="65.0441" length="868.934" onTer="69.859" pipes="69.859" width="7.35758" />
-<stats track="S7-HighMadness" time="98.0" height="104.653" length="2086.61" onTer="40.1508" pipes="0" width="8.20973" />
-<stats track="S8-Frenzy2slow" time="126.6" height="13.2556" length="2553.18" onTer="0" pipes="0" width="7.312" />
-<stats track="S9-demo" time="42.3" height="16.7453" length="1081.73" onTer="24.7931" pipes="12.7499" width="7.37207" />
-<stats track="T1-Autumn" time="76.0" height="29.5665" length="2059.75" onTer="4.6728" pipes="0" width="6.94078" />
-<stats track="T2-RedOakPark" time="53.0" height="29.2422" length="1506.37" onTer="10.9026" pipes="0" width="9.544" />
-<stats track="T3-Orange" time="61.0" height="22.7814" length="2554.1" onTer="0" pipes="0" width="8.93997" />
-<stats track="T4-Scary" time="115.0" height="61.2187" length="2986.57" onTer="9.32872" pipes="0" width="7.61134" />
-<stats track="T5-Twister" time="63.0" height="176.148" length="1089.3" onTer="100" pipes="0" width="6" />
-<stats track="T6-Sunset" time="90.0" height="17.4844" length="2346.13" onTer="10.9025" pipes="0" width="7" />
-<stats track="Test1-Flat" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="Test10-FlatPerf" time="0" height="11.5796" length="1211.76" onTer="0" pipes="0" width="11.016" />
-<stats track="Test11-Jumps" time="0" height="13.2213" length="2127.77" onTer="10.7306" pipes="0" width="9.69354" />
-<stats track="Test2-Asphalt" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="Test3-Bumps" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="Test4-TerrainBig" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="Test5-TerrainSmall" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="Test6-Fluids" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="Test7-FluidsSmall" time="0" height="9.352" length="215.928" onTer="100" pipes="100" width="9.232" />
-<stats track="Test8-Objects" time="0" height="0" length="0" onTer="0" pipes="0" width="0" />
-<stats track="TestC1-circle" time="17.3" height="3.423" length="568.65" onTer="100" pipes="0" width="12" />
-<stats track="TestC2-pipe-half" time="13.0" height="9.28107" length="564.063" onTer="100" pipes="100" width="12" />
-<stats track="TestC3-pipe-big" time="21.5" height="12.1308" length="1130.38" onTer="100" pipes="100" width="12.0005" />
-<stats track="TestC4-ow" time="11.0" height="11.5829" length="233.976" onTer="0" pipes="0" width="11.2619" />
-<stats track="TestC5-egg" time="9.2" height="0" length="371.995" onTer="0" pipes="0" width="6" />
-<stats track="TestC6-temp" time="6.6" height="0.381512" length="92.4449" onTer="0" pipes="0" width="6" />
-<stats track="TestC7-oc" time="16.0" height="12.5454" length="272.321" onTer="0" pipes="0" width="10.0592" />
-<stats track="TestC8-align" time="20.5" height="20.4734" length="635.342" onTer="0" pipes="0" width="12.9931" />
-<stats track="V1-Dark" time="33.5" height="8.47402" length="1139.21" onTer="0" pipes="0" width="6.776" />
-<stats track="V2-Volcanic" time="219.0" height="55.3883" length="5833.15" onTer="14.841" pipes="0" width="7.416" />
-<stats track="V3-Crater" time="56.8" height="62.3533" length="1790.21" onTer="66.9082" pipes="0" width="9.30085" />
-<stats track="V4-Spikeland" time="78.0" height="35.814" length="1447.84" onTer="14.1947" pipes="0" width="7" />
-<stats track="V5-Sad" time="168.0" height="34.0249" length="4327.26" onTer="17.1717" pipes="10.7185" width="7.29247" />
-<stats track="virginia" time="126.0" height="0" length="5264.2" onTer="100" pipes="0" width="8.656" />
-<stats track="weekend" time="113.5" height="0" length="4934.87" onTer="100" pipes="0" width="13.7503" />
-<stats track="X1-Magic" time="47.8" height="42.7623" length="1387.8" onTer="8.61014" pipes="17.0854" width="15.6135" />
-<stats track="X2-Swirl" time="109.5" height="186.705" length="3308.61" onTer="55.3843" pipes="52.6111" width="9.63733" />
-<stats track="X3-Cloud" time="130.0" height="59.1108" length="4839.72" onTer="1.72483" pipes="0" width="24.5818" />
-<stats track="X4-Pipeline" time="250.0" height="89.9379" length="7888.7" onTer="53.689" pipes="69.8063" width="11.6182" />
-<stats track="zandvoort" time="114.0" height="0" length="4371.82" onTer="100" pipes="0" width="10.2556" />
+<s n="0W1-cross" t="65.0" ba="3.51725" bm="10.2934" h="13.4444" l="2285.54" ot="0" p="0" w="7.976"/>
+<s n="0W10-Whirl" t="70.0" ba="11.4521" bm="28.614" h="68.3388" l="2130.17" ot="21.8951" p="0" w="8.304"/>
+<s n="0W11-Glacier" t="139.7" ba="5.10911" bm="23.164" h="157.824" l="5138.76" ot="24.0673" p="0" w="10.228"/>
+<s n="0W12-Peaks" t="35.6" ba="13.6499" bm="35.049" h="49.7003" l="1056.62" ot="100" p="0" w="15.2405"/>
+<s n="0W13-MtFog" t="90.6" ba="5.48675" bm="13.2887" h="11.5307" l="1412.38" ot="10.3417" p="0" w="8.85423"/>
+<s n="0W14-DangerRoad" t="91.0" ba="0" bm="0" h="37.7451" l="2007.47" op="100" ot="100" p="100" w="12.4769"/>
+<s n="0W2-Wet" t="73.6" ba="7.2109" bm="14.0646" h="22.6131" l="2610.98" ot="0" p="0" w="9.32"/>
+<s n="0W3-mouth" t="40.0" ba="18.3976" bm="26.2556" h="29.6648" l="1384.87" ot="0" p="0" w="9.62256"/>
+<s n="0W4-ice-blur" t="33.5" ba="3.28561" bm="5.82024" h="2.73258" l="530.823" ot="0" p="0" w="13"/>
+<s n="0W5-Circles" t="90.8" ba="7.88917" bm="23.4809" h="13.5551" l="2538.4" ot="0" p="0" w="11.16"/>
+<s n="0W6-88" t="127.8" ba="5.11338" bm="22.4157" h="11.0725" l="4560.37" ot="0" p="0" w="8.92536"/>
+<s n="0W7-LJs-Mntn" t="48.0" ba="3.17379" bm="12.3214" h="4.20299" l="1300.77" ot="0" p="0" w="11.0313"/>
+<s n="0W8-pipe8x8" t="55.7" ba="6.4268" bm="27.6013" h="35.7396" l="2097.82" ot="27.6114" p="27.6114" w="9.04"/>
+<s n="0W9-IceFrenzy" t="109.4" ba="14.2917" bm="37.62" h="23.6143" l="3950.21" ot="41.4463" p="0" w="14.0265"/>
+<s n="A1-StuntPark" t="187.6" ba="9.34454" bm="89.4" h="43.6292" l="5470.75" ot="68.1265" p="18.0132" w="8.81809"/>
+<s n="A2-PipeCoil" t="45.8" ba="26.1148" bm="87.8811" h="56.8098" l="1445.05" ot="100" p="100" w="6.9837"/>
+<s n="A3-Canyon" t="161.0" ba="2.60087" bm="21.9" h="135.453" l="5470.31" ot="32.2495" p="0" w="8.83581"/>
+<s n="A4-Snake" t="97.0" ba="11.5257" bm="58.8592" h="58.8714" l="2383.23" ot="100" p="100" w="16.3945"/>
+<s n="A5-TopTwist" t="165.5" ba="4.85143" bm="25.8185" h="65.8931" l="5328.53" ot="38.3939" p="0" w="13.4073"/>
+<s n="A6-Cannon" t="385.5" ba="9.44436" bm="38.82" h="339.736" l="15585.7" ot="17.4262" p="0" w="9.77377"/>
+<s n="brands" t="92.0" h="0" l="4013.45" ot="100" p="0" w="9.55565" />
+<s n="C1-Hairpins" t="63.9" ba="28.3744" bm="59.7459" h="59.4427" l="1916.15" ot="0" p="0" w="8.10393"/>
+<s n="C2-CanyonRun" t="67.9" ba="30.6811" bm="65.2489" h="32.0801" l="3255.17" ot="6.35826" p="0" w="8.48495"/>
+<s n="C3-Vast" t="260.7" ba="6.10492" bm="30.5083" h="165.66" l="13114.1" ot="4.19859" p="0" w="9.04799"/>
+<s n="C4-Sway" t="137.2" ba="25.5605" bm="60.4329" h="113.423" l="5636.6" ot="3.56779" p="0" w="11.4314"/>
+<s n="C5-Obstacles" t="81.0" ba="0.508696" bm="23.64" h="51.237" l="2817.31" ot="100" p="100" w="10.3058"/>
+<s n="D1-simple" t="68.0" ba="6.03617" bm="24.5188" h="15.1697" l="2751.16" ot="0" p="0" w="8.42651"/>
+<s n="D10-MudBath" t="138.5" ba="4.53272" bm="29.4139" h="15.3139" l="2728.95" ot="0" p="0" w="6.2848"/>
+<s n="D11-PersianCity" t="53.8" ba="1.52883" bm="28.4877" h="6.72892" l="1295.53" ot="0" p="0" w="6.83596"/>
+<s n="D12-Sandstorm" t="48.5" ba="4.66095" bm="15.2477" h="17.6169" l="1299.51" ot="0" p="0" w="10.7145"/>
+<s n="D13-Winding" t="91.0" ba="4.84399" bm="28.1479" h="74.4495" l="4466.74" ot="96.4038" p="100" w="9.15964"/>
+<s n="D14-JumpCrazy" t="67.0" ba="4.35245" bm="18.2396" h="29.8013" l="1646.48" ot="53.132" p="0" w="11.4558"/>
+<s n="D15-CityWall" t="121.0" ba="4.10168" bm="22.9075" h="50.3914" l="3376.25" ot="13.6498" p="0" w="7.52725"/>
+<s n="D16-AsphaltJumps" t="86.0" ba="5.49075" bm="43.56" h="32.3658" l="2835.33" ot="36.8053" p="0" w="8.21134"/>
+<s n="D2-Mntn" t="66.5" ba="2.60858" bm="10.9688" h="57.4953" l="1656.49" ot="18.7495" p="0" w="6.19049"/>
+<s n="D3-P" t="T" ba="7.68769" bm="32.2511" h="19.952" l="1897" ot="5.50849" p="0" w="7.42374"/>
+<s n="D4-SBridge" t="61.4" ba="2.14568" bm="7.727" h="15.7534" l="1963.28" ot="25.776" p="0" w="7.19656"/>
+<s n="D5-jump8-low" t="36.0" ba="1.3545" bm="9.25985" h="10.0455" l="1280.68" ot="15.1344" p="0" w="10.3005"/>
+<s n="D6-jump0-high" t="31.0" ba="1.01635" bm="2.97726" h="13.9452" l="1182.5" ot="20.1684" p="0" w="10.36"/>
+<s n="D7-CrossJumps" t="88.8" ba="6.90824" bm="41.9296" h="27.8859" l="4023.66" ot="17.2023" p="0" w="8.85233"/>
+<s n="D8-Technical" t="114.1" ba="7.25605" bm="45.2967" h="25.7124" l="4992.29" ot="12.4418" p="0" w="7.61403"/>
+<s n="D9-Mud" t="47.0" ba="0.9499" bm="4.76353" h="23.9306" l="1168.44" ot="0" p="0" w="7.736"/>
+<s n="detroit" t="62.0" h="0" l="3434.54" ot="100" p="0" w="7.688" />
+<s n="dirt3" t="110.0" h="0" l="2206.55" ot="100" p="0" w="11.408" />
+<s n="E1-Lakes" t="107.8" ba="3.17358" bm="10.5764" h="37.1846" l="3657.12" ot="9.30664" p="0" w="7.67274"/>
+<s n="F1-Slippery" t="50.2" ba="1.38269" bm="6.90358" h="9.89229" l="1596.87" ot="0" p="0" w="8.208"/>
+<s n="F10-MntnTrail" t="151.8" ba="9.61474" bm="39.1341" h="82.748" l="2847.75" ot="16.0581" p="0" w="7.6032"/>
+<s n="F11-Dawn" t="34.3" ba="8.02556" bm="25.6218" h="22.2048" l="860.211" ot="0" p="0" w="6"/>
+<s n="F12-HighPeaks" t="273.7" ba="4.04356" bm="18.9378" h="283.984" l="6740.13" ot="66.2516" p="0" w="7.94624"/>
+<s n="F13-Castle" t="102.2" ba="4.55527" bm="23.52" h="129.922" l="2268.23" ot="50.2015" p="0" w="8.66678"/>
+<s n="F14-Maze" t="210.3" ba="4.73354" bm="26.7715" h="40.178" l="3301.3" ot="18.5263" p="8.84958" w="6.54782"/>
+<s n="F15-ForestTrip" t="128.4" ba="2.54509" bm="11.7837" h="70.5409" l="3520.82" ot="9.19809" p="0" w="8.17092"/>
+<s n="F16-Clew" t="91.4" ba="8.67364" bm="31.2734" h="73.7972" l="1718.4" ot="66.1376" p="21.9716" w="6.49465"/>
+<s n="F3-Snail" t="40.1" ba="11.5799" bm="30.4601" h="15.7095" l="1199.83" ot="0" p="0" w="8.112"/>
+<s n="F4-OSquare" t="75.6" ba="3.76599" bm="15.3852" h="47.9366" l="2567.6" ot="0" p="0" w="8.4"/>
+<s n="F6-DC3" t="46.7" ba="14.8335" bm="51.266" h="29.1595" l="1878.2" ot="0" p="0" w="7.16497"/>
+<s n="F7-blur3" t="37.1" ba="22.7431" bm="39.5369" h="37.3308" l="1414.5" ot="0" p="0" w="7.696"/>
+<s n="F8-blurX3" t="36.7" ba="7.27077" bm="20.3115" h="9.40017" l="1165.65" ot="0" p="0" w="7.944"/>
+<s n="F9-MadMntn" t="142.8" ba="11.0109" bm="42.06" h="51.2233" l="4574.29" ot="100" p="0" w="10.9476"/>
+<s n="G1-Long" t="296.3" ba="3.57463" bm="29.8505" h="237.085" l="13843.9" ot="0" p="0" w="9.64662"/>
+<s n="G2-Coast" t="93.5" ba="3.13625" bm="17.1954" h="56.0444" l="3047.45" ot="0" p="0" w="7.16926"/>
+<s n="G3-Butterfly" t="44.2" ba="6.73088" bm="27.8737" h="29.348" l="1099.9" ot="0" p="0" w="7.51929"/>
+<s n="G4-River" t="34.4" ba="9.5359" bm="31.257" h="8.19935" l="740.717" ot="7.98053" p="0" w="6"/>
+<s n="G5-Climb" t="221.7" ba="2.04738" bm="16.14" h="226.249" l="8102.21" ot="51.1453" p="0" w="9.51817"/>
+<s n="G6-Halfp" t="102.0" ba="21.8034" bm="83.671" h="104.271" l="3643.79" ot="100" p="100" w="10.1335"/>
+<s n="I1-star3" t="48.0" ba="0.659144" bm="6.03826" h="5.34618" l="1699.4" ot="0" p="0" w="10.8946"/>
+<s n="I10-Treasure" t="85.5" ba="3.58892" bm="17.2766" h="12.6395" l="2239.68" ot="0" p="0" w="8.47763"/>
+<s n="I11-StuntIslands" t="287.5" ba="3.08434" bm="39.48" h="43.1246" l="10255" ot="45.8753" p="3.36019" w="8.36026"/>
+<s n="I12-Beach" t="45.5" ba="4.03709" bm="11.8486" h="19.7585" l="1209.53" ot="11.9634" p="0" w="8.60113"/>
+<s n="I13-Beauty" t="254.0" ba="3.75704" bm="26.9812" h="54.1454" l="9038.7" ot="38.9003" p="0" w="8.70351"/>
+<s n="I2-S8" t="40.0" ba="8.22598" bm="30.6311" h="7.07425" l="1304.67" ot="0" p="0" w="8.0696"/>
+<s n="I3-Islands" t="105.2" ba="2.24859" bm="23.521" h="15.6838" l="3477.53" ot="18.2452" p="7.32573" w="7.16299"/>
+<s n="I4-Sunset" t="56.6" ba="4.13884" bm="12.6726" h="11.4669" l="1675.29" ot="0" p="0" w="7.336"/>
+<s n="I5-Shore" t="80.4" ba="6.63186" bm="36.4174" h="68.7805" l="2059.97" ot="0" p="0" w="7.04152"/>
+<s n="I6-Flooded" t="46.6" ba="11.708" bm="31.8911" h="11.3313" l="1301.06" ot="26.4574" p="0" w="7.17999"/>
+<s n="I7-Moses" t="63.2" ba="6.72" bm="17.9707" h="20.2892" l="1475.12" ot="5.26101" p="0" w="6.6932"/>
+<s n="I8-Pharaoh" t="73.3" ba="12.629" bm="55.0658" h="41.7471" l="2645.16" ot="3.35625" p="0" w="12.0957"/>
+<s n="I9-Web" t="314.4" ba="14.3379" bm="84.96" h="128.254" l="13334.6" ot="92.1942" p="0" w="14.3021"/>
+<s n="J1-T" t="47.5" ba="5.05527" bm="14.8982" h="11.33" l="1684.97" ot="0" p="0" w="7.592"/>
+<s n="J10-Spiral" t="57.4" ba="10.8016" bm="27.8166" h="28.4339" l="1951.18" ot="0" p="0" w="7.71229"/>
+<s n="J11-Temple" t="44.4" ba="6.79485" bm="29.64" h="18.92" l="924.522" ot="24.1299" p="0" w="6.74608"/>
+<s n="J12-Fog" t="64.2" ba="2.64334" bm="10.3803" h="20.0598" l="1505.88" ot="0" p="0" w="6.48"/>
+<s n="J13-Tropic" t="254.3" ba="3.83783" bm="24.5559" h="86.0919" l="6843.4" ot="16.8821" p="0" w="7.59461"/>
+<s n="J14-Muddy" t="51.0" ba="4.68775" bm="21.4927" h="11.2401" l="796.785" ot="8.2106" p="0" w="6.12878"/>
+<s n="J15-Swamp" t="128.6" ba="3.2764" bm="24.12" h="15.6926" l="2843.38" ot="12.3488" p="0" w="5.58339"/>
+<s n="J16-MudMad" t="71.5" ba="6.81737" bm="30.3693" h="25.625" l="1105.46" ot="18.3006" p="0" w="6.99487"/>
+<s n="J17-JungleCanyons" t="199.0" ba="4.60132" bm="20.0382" h="131.699" l="5947.08" ot="4.01701" p="0" w="11.5313"/>
+<s n="J18-Tiny" t="36.3" ba="13.7276" bm="49.4319" h="14.715" l="817.799" ot="4.52407" p="0" w="6.232"/>
+<s n="J19-demo2" t="58.2" ba="4.922" bm="32.433" h="78.121" l="1886.55" ot="35.7771" p="16.6658" w="7.78706"/>
+<s n="J20-JungleMaze" t="252.2" ba="5.58398" bm="65.7012" h="151.766" l="7160.11" ot="46.178" p="0" w="9.27012"/>
+<s n="J21-Paradise" t="192.0" ba="3.02103" bm="14.5693" h="113.038" l="7330" ot="61.4971" p="0" w="9.06554"/>
+<s n="J22-Knotted" t="132.0" ba="8.12595" bm="30.4619" h="43.544" l="2876.25" ot="81.5665" p="33.121" w="9.77488"/>
+<s n="J3-Rocky" t="49.8" ba="6.6794" bm="30.0174" h="15.7951" l="1903.7" ot="0" p="0" w="8.592"/>
+<s n="J4-Pipe8" t="21.0" ba="6.49578" bm="21.7086" h="25.9128" l="877.502" ot="98.0625" p="98.0625" w="12.1113"/>
+<s n="J5-Pipes" t="30.0" ba="7.60281" bm="50.1" h="45.5938" l="1119.8" ot="97.0849" p="76.7844" w="11.8079"/>
+<s n="J6-80fun" t="109.8" ba="7.12757" bm="67.8599" h="57.1987" l="3497.65" ot="61.8316" p="21.7735" w="13.5925"/>
+<s n="J7-Hilly" t="52.8" ba="6.42031" bm="17.526" h="30.1595" l="1751.18" ot="3.32432" p="0" w="8.29535"/>
+<s n="J8-Round" t="69.1" ba="10.5584" bm="23.3096" h="6.78782" l="2549.31" ot="0" p="0" w="7.03462"/>
+<s n="J9-Sharp" t="47.2" ba="6.83092" bm="27.5884" h="41.1979" l="1408.41" ot="18.5818" p="0" w="7.91405"/>
+<s n="M1-Hills" t="34.2" ba="11.7181" bm="32.2543" h="34.66" l="942.317" ot="0" p="0" w="9.776"/>
+<s n="M2-Bumps" t="57.6" ba="4.28763" bm="17.7805" h="49.3006" l="1508.03" ot="12.3925" p="0" w="10.1304"/>
+<s n="M3-Mudlake" t="77.0" ba="13.0172" bm="38.4543" h="77.1835" l="2310.33" ot="61.1761" p="51.9421" w="9.92135"/>
+<s n="mosport" t="96.0" h="0" l="3932.95" ot="100" p="0" w="9.528" />
+<s n="O1-Moss" t="42.3" ba="12.806" bm="31.0466" h="54.1553" l="1415.64" ot="0" p="0" w="8.90156"/>
+<s n="O2-Mouse" t="57.9" ba="15.9645" bm="31.3473" h="20.8076" l="1661.17" ot="0" p="0" w="9.56948"/>
+<s n="O3-Air" t="35.4" ba="7.05968" bm="24.9739" h="38.9533" l="1069.6" ot="5.01097" p="0" w="8.99913"/>
+<s n="O4-MossyMntn" t="82.0" ba="5.25626" bm="32.6933" h="69.2933" l="2740.75" ot="24.5333" p="0" w="8.04988"/>
+<s n="R1-Mars" t="124.5" ba="12.2905" bm="56.7663" h="68.5989" l="4978.02" ot="14.1732" p="0" w="10.9136"/>
+<s n="R2-Red" t="120.0" ba="7.84551" bm="50.6527" h="67.738" l="2423.36" ot="59.2803" p="29.5316" w="9.69933"/>
+<s n="R3-Hot" t="41.0" ba="17.1681" bm="44.1885" h="51.1115" l="1361.07" op="8.51069" ot="12.2149" p="12.2149" w="9.42898"/>
+<s n="ruudskogen" t="73.0" h="0" l="3194.07" ot="100" p="0" w="8.24" />
+<s n="S10-Pipe88" t="61.5" ba="0.000310282" bm="0.0269945" h="66.8277" l="3033.85" ot="100" p="100" w="12.4304"/>
+<s n="S12-Infinity" t="90.3" ba="2.54956" bm="31.26" h="157.498" l="3860.38" ot="100" p="100" w="9.7664"/>
+<s n="S13-Hole" t="92.1" ba="43.1535" bm="78.0682" h="83.189" l="3117.13" ot="0" p="0" w="5.41474"/>
+<s n="S14-Refinery" t="216.0" ba="17.9382" bm="89.9657" h="69.1901" l="5328.33" ot="83.7277" p="35.8204" w="8.17874"/>
+<s n="S15-Scorpio" t="125.0" ba="18.4112" bm="74.5798" h="62.9068" l="4501.92" ot="37.789" p="9.03288" w="8.61735"/>
+<s n="S2-Frenzy" t="193.1" ba="8.37642" bm="29.0856" h="50.7778" l="5909.14" ot="0" p="0" w="7.2"/>
+<s n="S3-Loops" t="72.1" ba="10.8609" bm="88.2" h="44.1889" l="1734.03" ot="71.1431" p="0" w="6.52253"/>
+<s n="S4-Hills" t="168.2" ba="11.59" bm="55.2243" h="110.211" l="5803.93" ot="21.6762" p="0" w="7.21803"/>
+<s n="S5-LoopBasic" t="61.0" ba="12.2402" bm="89.4" h="52.0821" l="2135.34" ot="61.5101" p="21.1191" w="6.84666"/>
+<s n="S6-PipeCrazy" t="31.8" ba="1.47022" bm="29.76" h="65.0441" l="868.934" ot="69.859" p="69.859" w="7.35758"/>
+<s n="S7-HighMadness" t="85.2" ba="11.1168" bm="38.4" h="104.617" l="2086.61" ot="40.1508" p="0" w="8.20973"/>
+<s n="S8-Frenzy2slow" t="112.1" ba="2.43597" bm="13.9268" h="13.2556" l="2553.18" ot="0" p="0" w="7.312"/>
+<s n="S9-demo" t="36.1" ba="8.30937" bm="31.1249" h="16.7453" l="1081.73" ot="24.7931" p="12.7499" w="7.37207"/>
+<s n="T1-Autumn" t="69.0" ba="5.31116" bm="22.8881" h="29.5665" l="2059.75" ot="4.6728" p="0" w="6.94078"/>
+<s n="T2-RedOakPark" t="47.5" ba="10.6098" bm="26.2982" h="29.2422" l="1506.37" ot="10.9026" p="0" w="9.544"/>
+<s n="T3-Orange" t="56.9" ba="35.4597" bm="71.6134" h="22.7814" l="2554.1" ot="0" p="0" w="8.93997"/>
+<s n="T4-Scary" t="98.6" ba="8.07283" bm="26.4779" h="61.2187" l="2986.57" ot="9.32873" p="0" w="7.61134"/>
+<s n="T5-Twister" t="54.0" ba="22.2314" bm="47.9082" h="176.148" l="1088.93" ot="100" p="0" w="6"/>
+<s n="T6-Sunset" t="82.6" ba="3.45548" bm="17.1456" h="17.4844" l="2346.13" ot="10.9025" p="0" w="7"/>
+<s n="Test1-Flat" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test10-FlatPerf" t="1" h="11.5796" l="1211.76" ot="0" p="0" w="11.016" />
+<s n="Test11-Jumps" t="63" h="13.2213" l="2127.77" ot="10.7306" p="0" w="9.69354" />
+<s n="Test2-Asphalt" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test3-Bumps" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test4-TerrainBig" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test5-TerrainSmall" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test6-Fluids" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test7-FluidsSmall" t="1" h="9.352" l="215.928" ot="100" p="100" w="9.232" />
+<s n="Test8-Objects" t="1" h="0" l="0" ot="0" p="0" w="0" />
+<s n="Test9-Objects2" t="1" h="34.6464" l="445.072" ot="22.5318" p="0" w="7.31072" />
+<s n="TestC1-circle" t="14.7" h="3.423" l="568.65" ot="100" p="0" w="12" />
+<s n="TestC2-pipe-half" t="12.6" h="9.28107" l="564.063" ot="100" p="100" w="12" />
+<s n="TestC3-pipe-big" t="19.9" h="12.1308" l="1130.38" ot="100" p="100" w="12.0005" />
+<s n="TestC4-ow" t="11.0" h="11.5829" l="233.976" ot="0" p="0" w="11.2619" />
+<s n="TestC5-egg" t="10.0" h="0" l="371.995" ot="0" p="0" w="6" />
+<s n="TestC6-temp" t="7.6" h="0.381512" l="92.4449" ot="0" p="0" w="6" />
+<s n="TestC7-oc" t="12.7" h="12.5454" l="272.321" ot="0" p="0" w="10.0592" />
+<s n="TestC8-align" t="17.2" h="20.4734" l="635.342" ot="0" p="0" w="12.9931" />
+<s n="V1-Dark" t="35.5" ba="4.25122" bm="26.7413" h="8.47402" l="1139.22" ot="0" p="0" w="6.776"/>
+<s n="V2-Volcanic" t="193.0" ba="3.94143" bm="26.0768" h="55.3883" l="5833.15" ot="14.841" p="0" w="7.416"/>
+<s n="V3-Crater" t="51.3" ba="17.3411" bm="26.58" h="62.3533" l="1790.21" ot="66.9082" p="0" w="9.30085"/>
+<s n="V4-Spikeland" t="74.2" ba="4.18012" bm="29.1169" h="35.814" l="1447.84" ot="14.1947" p="0" w="7"/>
+<s n="V5-Sad" t="155.0" ba="4.08669" bm="24.84" h="34.0249" l="4327.26" ot="17.1717" p="10.7185" w="7.29247"/>
+<s n="V6-Crematoria" t="305.0" ba="25.0275" bm="78.8399" h="181.982" l="9417.6" ot="90.0861" p="0" w="8.90607"/>
+<s n="V7-Radioactive" t="98.0" ba="5.26796" bm="21.6" h="39.6692" l="3112.39" op="33.2465" ot="80.2227" p="37.4157" w="8.40525"/>
+<s n="virginia" t="118.0" h="0" l="5264.2" ot="100" p="0" w="8.656" />
+<s n="weekend" t="102.5" h="0" l="4934.87" ot="100" p="0" w="13.7503" />
+<s n="X1-Magic" t="47.3" ba="17.8922" bm="54.0633" h="42.7623" l="1387.8" ot="8.61014" p="17.0854" w="15.6135"/>
+<s n="X2-Swirl" t="99.0" ba="5.76639" bm="40.9301" h="186.705" l="3308.61" ot="55.3843" p="52.6111" w="9.63733"/>
+<s n="X3-Cloud" t="121.8" ba="8.96482" bm="25.1461" h="59.1104" l="4839.72" ot="1.72483" p="0" w="24.5818"/>
+<s n="X4-Pipeline" t="208.4" ba="2.7113" bm="52.9244" h="89.9379" l="7888.7" op="5.26866" ot="53.689" p="69.8063" w="11.6182"/>
+<s n="X5-PipeJumps" t="110.0" ba="12.2173" bm="45.7199" h="115.437" l="4931.77" ot="100" p="94.6793" w="13.2671"/>
+<s n="X6-Wild" t="210.0" ba="4.75307" bm="24.6191" h="97.8983" l="5022.91" ot="46.4151" p="0" w="8.41994"/>
+<s n="zandvoort" t="109.0" h="0" l="4371.82" ot="100" p="0" w="10.2556" />
 </roadstats>
