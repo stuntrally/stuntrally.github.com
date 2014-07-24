@@ -114,7 +114,8 @@
 '	<td class="t1">Bank.Angles</td>	<td class="r2" id="bnkAvg"></td>	<td class="t2" id="bnkMax"></td> </tr>'+
 '<td class="h1"><br/></td> </tr><tr>'+  //todo img icons png..
 '	<td class="t1">objects</td>	<td class="t1" id="objects"></td>	<td class="t3"></td> </tr><tr>'+
-'	<td class="t1">fluids</td>	<td class="t1" id="fluids"></td>	<td class="t3"></td> </tr><tr>'+
+'	<td class="t1">obstacles</td> <td class="t1" id="obstacles"></td>	<td class="t3"></td> </tr><tr>' +
+'	<td class="t1">fluids</td>	<td class="t1" id="fluids"></td>	<td class="t3"></td> </tr><tr>' +
 '	<td class="t1">bumps</td>	<td class="t1" id="bumps"></td>		<td class="t3"></td> </tr><tr>'+
 '	<td class="t1">jumps</td>	<td class="t1" id="jumps"></td>		<td class="t3"></td> </tr><tr>'+
 '	<td class="t1">loops</td>	<td class="t1" id="loops"></td>		<td class="t3"></td> </tr><tr>'+
@@ -180,7 +181,7 @@
 	trks = raw+"tracks/master/";
 
 	adiff = ["Test Easy","Very Easy","Easy","Medium","Hard","Very Hard","Extreme","Ultra"];
-	td = ['objects','fluids','bumps','jumps','loops','pipes','banked','frenzy','long'];
+	td = ['objects','obstacles','fluids','bumps','jumps','loops','pipes','banked','frenzy','long'];
 	
 	function lnk(s)
 	{
@@ -220,10 +221,10 @@
 						document.getElementById("road").src = p+"road.png";
 
 						set("scene",t[4].substr(1));
-						set("rate",t[15].substr(2));
-						set("diff",adiff[t[14].substr(2)]);
+						set("rate",t[16].substr(2));
+						set("diff",adiff[t[15].substr(2)]);
 
-						set("auth",t[17].substr(2).replace("CH","CryHam"));
+						set("auth",t[18].substr(2).replace("CH","CryHam"));
 						set("ver",t[1].substr(2));
 						set("crt",t[2]);  set("mod",t[3]);
 
