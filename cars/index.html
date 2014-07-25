@@ -60,6 +60,11 @@
         else return "";
     }
 
+    function f2s(val, prec) {
+    	power = Math.pow(10, prec || 0);
+    	return String(Math.round(val * power) / power);
+    }
+
     id = getPar('id');  // trk name
     v = getPar('v');  // view size
     if (v == '') v = 1;
@@ -106,6 +111,8 @@
 '	<td class="r1">Type</td>	<td class="t2" id="type" colspan="2"></td> </tr><tr>' +
 '	<td class="r1">Speed</td>	<td class="t2" id="speed" colspan="2"></td> </tr><tr>' +
 '	<td class="r1">Year</td>	<td class="t2" id="year" colspan="2"></td> </tr><tr>' +
+'	<td class="r1">Since version</td>	<td class="t3" id="ver" colspan="2"></td> </tr><tr>' +
+'	<td class="r1">Author</td>	<td class="t3" id="author" colspan="2"></td> </tr><tr>' +
 '<td class="h1"><br/></td> </tr><tr>' +
 '	<td class="r3" id="stats1">Stats</td>	<td class="t3" id="stats2"></td>	</tr>' +
 '</table></div>' +
@@ -162,17 +169,15 @@
                 //crtver
                 name = x[i].getAttribute('id');
                 if (name == id) {
-                    //crtver
-                    type = x[i].getAttribute('type');
-                    speed = x[i].getAttribute('speed');
-                    year = x[i].getAttribute('year');
+
+                	set("type", x[i].getAttribute('type'));
+                	set("speed",x[i].getAttribute('speed'));
+                	set("year", x[i].getAttribute('year'));
+                	set("ver",  x[i].getAttribute('crtver'));
+                	set("author", x[i].getAttribute('author'));
 
                     document.getElementById("view").src = cars + id + ".jpg";
-
-                    set("type", type);
-                    set("speed", speed);
-                    set("year", year);
-                }
+				}
                 ar.push(name);
             }
             ar.sort(alphabetical);
@@ -185,7 +190,7 @@
                 txt = txt + "<br/>";
             }
             if (q - 1 >= 0) document.getElementById("prev").onclick = function () { window.location = lnk(ar[q - 1], sim); }
-            if (q + 1 < l) document.getElementById("next").onclick = function () { window.location = lnk(ar[q + 1], sim); }
+            if (q + 1 < l)  document.getElementById("next").onclick = function () { window.location = lnk(ar[q + 1], sim); }
 
             document.getElementById("easy").onclick = function () { window.location = lnk(ar[q], "easy"); }
             document.getElementById("norm").onclick = function () { window.location = lnk(ar[q], "norm"); }
@@ -207,32 +212,65 @@
     { xr = new ActiveXObject("Microsoft.XMLHTTP"); }
 
     xr.onreadystatechange = function () {
-        if (xr.readyState == 4 && xr.status == 200) {
+    	if (xr.readyState == 4 && xr.status == 200) {
+    		xd = xr.responseXML;
+    		txt = "";  st = "";
 
-            fileTxt = this.responseText;
-            lines = fileTxt.split('\n');
-            n = lines.length;
+    		txt = txt + "Mass<br/>";
+    		x = xd.getElementsByTagName("car"); f = x[0].getAttribute('mass');
+    		st = st + f2s(f,0) + " kg<br/>";
 
-            tab1 = '', tab2 = '';
-            //tab1 = '<table>', tab2 = '<table>';
+    		txt = txt + "Mass front<br/>";
+    		x = xd.getElementsByTagName("com"); f = x[0].getAttribute('frontPercent');
+    		st = st + f2s(f,0) + " %<br/>";
 
-            for (i = 0; i < n; i++) {
-                var row = lines[i];
-                if (i % 2==0)
-                        tab1 += row + '<br/>';
-                    else
-                        tab2 += row + '<br/>';
-                    //tab1 += '<tr class="t1">' + row + '</tr><br/>';
-                //else
-                //    tab2 += '<tr class="t1">' + row + '</tr><br/>';
-            }
-            //tab1 += '</table>'; tab2 += '</table>';
-            set("stats1", tab1);
-            set("stats2", tab2);
-        }
-    }
+    		txt = txt + "<br/>";  st = st + "<br/>";
 
-    xr.open("GET", sim+"/"+id+"_stats.txt", true);
+    		txt = txt + "Max Torque<br/>";
+    		x = xd.getElementsByTagName("torque"); f = x[0].getAttribute('max');
+    		st = st + f2s(f,0) + " Nm<br/>";
+
+    		txt = txt + "Max Power<br/>";
+    		x = xd.getElementsByTagName("power"); f = x[0].getAttribute('max');
+    		st = st + f2s(f,0) + " bhp<br/>";
+
+    		txt = txt + "Bhp per tonne<br/>";
+    		x = xd.getElementsByTagName("bhpPerTon"); f = x[0].getAttribute('val');
+    		st = st + f2s(f,0) + "<br/>";
+
+    		txt = txt + "<br/>"; st = st + "<br/>";
+
+    		txt = txt + "Top speed<br/>";
+    		x = xd.getElementsByTagName("top"); f = x[0].getAttribute('speed');
+    		st = st + f2s(f, 0) + " km/h<br/>";
+
+    		txt = txt + "<br/>"; st = st + "<br/>";
+    		x = xd.getElementsByTagName("accel");
+
+    		f = x[0].getAttribute('t100');
+    		txt = txt + "Time to 100 km/h<br/>";
+    		st = st + f2s(f, 1) + " s<br/>";
+
+    		f = x[0].getAttribute('t160'); if (f > 0.5) {
+    			txt = txt + "Time to 160 km/h<br/>";
+    			st = st + f2s(f, 1) + " s<br/>";
+    		}
+    		f = x[0].getAttribute('t200'); if (f > 0.5) {
+    			txt = txt + "Time to 200 km/h<br/>";
+    			st = st + f2s(f, 1) + " s<br/>";
+    		}
+    		txt = txt + "<br/>"; st = st + "<br/>";
+    		x = xd.getElementsByTagName("stop");
+
+    		f = x[0].getAttribute('s100');
+    		txt = txt + "Stop from 100 km/h<br/>";
+    		st = st + f2s(f, 1) + " s<br/>";
+
+    		set("stats1", txt);
+    		set("stats2", st);
+		}
+   	}
+	xr.open("GET", sim+"/"+id+"_stats.xml", true);
     xr.send();
 
 </script>
