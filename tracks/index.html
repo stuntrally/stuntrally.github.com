@@ -221,16 +221,16 @@
 						document.getElementById("road").src = p+"road.png";
 
 						set("scene",t[4].substr(1));
-						set("rate",t[16].substr(2));
-						set("diff",adiff[t[15].substr(2)]);
+						set("rate",t[16].substr(1));
+						set("diff",adiff[t[15].substr(1)]);
 
 						set("auth",t[18].substr(2).replace("CH","CryHam"));
-						set("ver",t[1].substr(2));
+						set("ver",t[1].substr(1));
 						set("crt",t[2]);  set("mod",t[3]);
 
 						for (d = 0; d < td.length; d++)
 						{
-							s = t[d+5].substr(d==0?3:2);
+							s = t[d+5].substr(d==0?2:1);
 							if (s=='0') s='';
 							set(td[d], s);
 						}
